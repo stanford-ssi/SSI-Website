@@ -69,6 +69,7 @@ export default function Navigation(): ReactElement {
       top={0}
       width="full"
       zIndex={999}
+      bg="black"
     >
       <HStack align="center" justify="space-between" spacing={4}>
         <HStack spacing={4} width="full">

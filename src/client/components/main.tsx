@@ -1,5 +1,7 @@
 import { HeroSection } from './heroSection';
 import Layout from './layout';
+import { SponsorsSection } from './sponsorsSection';
+import { TeamsSection } from './teamsSection';
 
 export function Main() {
   return (
@@ -8,6 +10,8 @@ export function Main() {
       description="Stanford Student Space Initiative"
     >
       <HeroSection />
+      <TeamsSection />
+      <SponsorsSection />
     </Layout>
   );
 }

@@ -1,5 +1,13 @@
-import { Heading } from '@chakra-ui/react';
+import { HeroSection } from './heroSection';
+import Layout from './layout';
 
 export function Main() {
-  return <Heading>SSI</Heading>;
+  return (
+    <Layout
+      title="Stanford SSI"
+      description="Stanford Student Space Initiative"
+    >
+      <HeroSection />
+    </Layout>
+  );
 }

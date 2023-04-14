@@ -6,15 +6,15 @@ import { PrimaryButton } from './primaryButton';
 
 export function HeroSection() {
   return (
-    <VStack spacing={8}>
+    <VStack spacing={8} p={8}>
       <Image alt="Stanford SSI" src="/logo.png" width={128} height={128} />
-      <Heading as="h1" size="3xl">
+      <Heading as="h1" size="3xl" textAlign="center">
         Stanford{' '}
         <Text as="span" color="primary.300">
           SSI
         </Text>
       </Heading>
-      <Text color="gray.400">
+      <Text color="gray.400" textAlign="center">
         Website currently under construction. Join our Slack for updates!
       </Text>
       <PrimaryButton

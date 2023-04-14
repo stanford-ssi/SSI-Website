@@ -62,7 +62,14 @@ function NavLink({ href, children }: NavLinkProps): ReactElement {
 
 export default function Navigation(): ReactElement {
   return (
-    <Box px={32} py={6} position="sticky" top={0} width="full" zIndex={999}>
+    <Box
+      px={{ base: 6, md: 32 }}
+      py={6}
+      position="sticky"
+      top={0}
+      width="full"
+      zIndex={999}
+    >
       <HStack align="center" justify="space-between" spacing={4}>
         <HStack spacing={4} width="full">
           <Text>Stanford SSI</Text>
@@ -78,7 +85,10 @@ export default function Navigation(): ReactElement {
             href="https://join.slack.com/t/ssi-teams/shared_invite/zt-1t8y0gu90-_9AUA7mtIDHqU9qNC80iAw"
             target="_blank"
           >
-            Join us on Slack
+            Join us
+            <Text as="span" display={{ base: 'none', md: 'initial' }}>
+              &nbsp;on Slack
+            </Text>
           </PrimaryButton>
         </HStack>
       </HStack>

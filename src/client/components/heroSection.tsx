@@ -15,14 +15,15 @@ export function HeroSection() {
         </Text>
       </Heading>
       <Text color="gray.400" textAlign="center">
-        Website currently under construction. Join our Slack for updates!
+        Website currently under construction. Please check Slack or contact us
+        for updates!
       </Text>
       <PrimaryButton
         as="a"
-        href="https://join.slack.com/t/ssi-teams/shared_invite/zt-1t8y0gu90-_9AUA7mtIDHqU9qNC80iAw"
+        href="mailto:space.initiative@stanford.edu"
         target="_blank"
       >
-        Join us on Slack
+        Contact Us
       </PrimaryButton>
       {/* <Box w="100%" h="200px" bgGradient={primaryGradient} /> */}
     </VStack>

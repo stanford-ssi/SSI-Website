@@ -80,7 +80,7 @@ export default function Navigation(): ReactElement {
               {title}
             </NavLink>
           ))}
-          <PrimaryButton
+          {/* <PrimaryButton
             as="a"
             href="https://join.slack.com/t/ssi-teams/shared_invite/zt-1t8y0gu90-_9AUA7mtIDHqU9qNC80iAw"
             target="_blank"
@@ -89,7 +89,7 @@ export default function Navigation(): ReactElement {
             <Text as="span" display={{ base: 'none', md: 'initial' }}>
               &nbsp;on Slack
             </Text>
-          </PrimaryButton>
+          </PrimaryButton> */}
         </HStack>
       </HStack>
     </Box>

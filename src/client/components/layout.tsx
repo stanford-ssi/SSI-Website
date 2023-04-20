@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Footer from './footer';
 
 import Navigation from './navigation';
 
@@ -42,6 +43,7 @@ export default function Layout({
         <Navigation />
         {children}
       </main>
+      <Footer />
     </>
   );
 }

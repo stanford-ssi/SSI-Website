@@ -1,4 +1,12 @@
-import { Box, Card, Heading, HStack, Text, VStack } from '@chakra-ui/react';
+import {
+  Box,
+  Card,
+  Heading,
+  HStack,
+  SimpleGrid,
+  Text,
+  VStack
+} from '@chakra-ui/react';
 
 interface SponsorCardProps {
   name: string;
@@ -25,7 +33,6 @@ function SponsorCard({ name, tier }: SponsorCardProps) {
         align="center"
         justify="center"
         flexShrink={0}
-        mt={6}
       >
         <Text color={tier === 'silver' ? 'gray.700' : 'white'} fontSize="xl">
           {name}
@@ -46,7 +53,12 @@ export function SponsorsSection() {
           industry leaders.
         </Text>
       </VStack>
-      <HStack spacing={6} justify="center" flexWrap="wrap" px={6}>
+      <SimpleGrid
+        spacing={6}
+        p={6}
+        pb={0}
+        columns={{ base: 2, sm: 3, md: 4, lg: 6, xl: 8 }}
+      >
         <SponsorCard name="Autodesk" tier="platinum" />
         <SponsorCard name="Harwin" tier="gold" />
         <SponsorCard name="BA Circuits" tier="silver" />
@@ -55,7 +67,7 @@ export function SponsorsSection() {
         <SponsorCard name="GranSystems" tier="silver" />
         <SponsorCard name="Quanta" tier="silver" />
         <SponsorCard name="Ansys" tier="silver" />
-      </HStack>
+      </SimpleGrid>
     </VStack>
   );
 }

@@ -17,7 +17,7 @@ export function EventsSection() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <Stack spacing={8} px={{ base: 6, md: 32 }} pb={16} align="start">
+    <Stack spacing={8} px={{ base: 6, md: 32 }} py={16} align="start">
       <Heading size="2xl">Upcoming Events</Heading>
       <Text flex={1} color="gray.400">
         We host a variety of events throughout the year, including workshops,

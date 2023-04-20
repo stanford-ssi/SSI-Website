@@ -42,16 +42,19 @@ function TeamCard({ name, children }: TeamCardProps) {
 
 export function TeamsSection() {
   return (
-    <Stack spacing={8} px={{ base: 6, md: 32 }} py={16}>
-      <Heading size="2xl">Teams</Heading>
-      <HStack>
-        <Text flex={1} color="gray.400">
+    <Stack spacing={8} py={16}>
+      <VStack spacing={8} px={{ base: 6, md: 32 }}>
+        <Heading size="2xl">Teams</Heading>
+        <Text flex={1} color="gray.400" textAlign="center">
           Here are the teams that make up SSI. Each team has a unique focus. If
           you&apos;re interested in joining a team, please reach out!
         </Text>
-        <Box flex={{ base: 0, md: 1 }} />
-      </HStack>
-      <SimpleGrid columns={3} spacing={6}>
+      </VStack>
+      <SimpleGrid
+        px={{ base: 6, lg: 32 }}
+        columns={{ base: 1, md: 2, lg: 3 }}
+        spacing={6}
+      >
         <TeamCard name="Balloons">
           The Balloons Team has launched and recovered more than 50 high
           altitude balloons carrying scientific payloads to over 100,000 feet.

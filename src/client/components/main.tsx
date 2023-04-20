@@ -1,3 +1,4 @@
+import { BlogSection } from './blogSection';
 import { EventsSection } from './eventsSection';
 import { HeroSection } from './heroSection';
 import Layout from './layout';
@@ -14,6 +15,7 @@ export function Main() {
       <TeamsSection />
       <EventsSection />
       <SponsorsSection />
+      <BlogSection />
     </Layout>
   );
 }

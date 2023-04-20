@@ -20,7 +20,7 @@ function SponsorCard({ name, tier }: SponsorCardProps) {
             ? 'primary.100'
             : 'black'
         }
-        width={{ base: '128px', md: '160px' }}
+        width={{ base: '128px', md: '140px' }}
         height="92px"
         align="center"
         justify="center"

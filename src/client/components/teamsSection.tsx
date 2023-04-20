@@ -8,14 +8,29 @@ import {
   Text,
   VStack
 } from '@chakra-ui/react';
+import { primaryGradient } from 'client/theme';
 
 type TeamCardProps = React.PropsWithChildren<{ name: string }>;
 
 function TeamCard({ name, children }: TeamCardProps) {
   return (
-    <Card rounded="2xl" bg="gray.900" p={12}>
+    <Card
+      rounded="2xl"
+      bg="gray.900"
+      p={12}
+      role="group"
+      _hover={{
+        boxShadow: '2xl'
+      }}
+    >
       <VStack spacing={4}>
-        <Card rounded="3xl" bg="gray.800" width="104px" height="104px"></Card>
+        <Card
+          rounded="3xl"
+          bg="gray.800"
+          width="104px"
+          height="104px"
+          _groupHover={{ bgGradient: primaryGradient }}
+        ></Card>
         <Text color="white" fontSize="lg" fontWeight="bold">
           {name}
         </Text>

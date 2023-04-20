@@ -7,7 +7,12 @@ import { PrimaryButton } from './primaryButton';
 export function HeroSection() {
   return (
     <VStack spacing={8} p={6}>
-      <Image alt="Stanford SSI" src="/logo.png" width={128} height={128} />
+      <Image
+        alt="Stanford SSI"
+        src="/images/logo.png"
+        width={128}
+        height={128}
+      />
       <Heading as="h1" size="3xl" textAlign="center">
         Stanford{' '}
         <Text as="span" color="primary.300">
@@ -19,10 +24,10 @@ export function HeroSection() {
       </Text>
       <PrimaryButton
         as="a"
-        href="https://join.slack.com/t/ssi-teams/shared_invite/zt-1t8y0gu90-_9AUA7mtIDHqU9qNC80iAw"
+        href="https://wiki.stanfordssi.org/How_to_Join_SSI"
         target="_blank"
       >
-        Join us on Slack
+        Join SSI
       </PrimaryButton>
       {/* <Box w="100%" h="200px" bgGradient={primaryGradient} /> */}
     </VStack>

@@ -7,42 +7,61 @@ import { PrimaryButton } from './primaryButton';
 
 type NavLinkWrapperProps = React.PropsWithChildren<{
   href: string;
+  target?: string;
   active: boolean;
 }>;
 
 type NavLinkProps = React.PropsWithChildren<{
   href: string;
+  newTab?: boolean;
 }>;
 
 const routes = [
   {
     title: 'Home',
-    link: '/'
+    link: '/',
+    newTab: false
+  },
+  {
+    title: 'Alumni',
+    link: 'http://wiki.stanfordssi.org/How_to_Join_SSI%27s_Alumni_Network',
+    newTab: true
+  },
+  {
+    title: 'Wiki',
+    link: 'https://ssi-wiki.stanford.edu/Main_Page',
+    newTab: true
   }
 ] as const;
 
 function NavLinkWrapper({
   href,
+  target,
   active,
   children
 }: NavLinkWrapperProps): ReactElement {
   if (active) return <>{children}</>;
   return (
-    <NextLink href={href} passHref>
+    <NextLink href={href} target={target}>
       {children}
     </NextLink>
   );
 }
 
-function NavLink({ href, children }: NavLinkProps): ReactElement {
+function NavLink({ href, children, newTab }: NavLinkProps): ReactElement {
   const router = useRouter();
 
   const url = new URL(`https://stanfordssi.org${href}`);
   const active = url.pathname === router.pathname;
 
   return (
-    <NavLinkWrapper href={href} active={active}>
+    <NavLinkWrapper
+      href={href}
+      target={newTab ? '_blank' : undefined}
+      active={active}
+    >
       <Link
+        as="span"
         px={2}
         py={1}
         rounded={'md'}
@@ -76,20 +95,17 @@ export default function Navigation(): ReactElement {
           <Text>Stanford SSI</Text>
         </HStack>
         <HStack as="nav" width="full" spacing={4} flex={1}>
-          {routes.map(({ title, link }) => (
-            <NavLink key={title} href={link}>
+          {routes.map(({ title, link, newTab }) => (
+            <NavLink key={title} href={link} newTab={newTab}>
               {title}
             </NavLink>
           ))}
           <PrimaryButton
             as="a"
-            href="https://join.slack.com/t/ssi-teams/shared_invite/zt-1t8y0gu90-_9AUA7mtIDHqU9qNC80iAw"
+            href="https://wiki.stanfordssi.org/How_to_Join_SSI"
             target="_blank"
           >
-            Join us
-            <Text as="span" display={{ base: 'none', md: 'initial' }}>
-              &nbsp;on Slack
-            </Text>
+            Join
           </PrimaryButton>
         </HStack>
       </HStack>

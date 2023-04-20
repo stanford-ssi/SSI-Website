@@ -1,12 +1,4 @@
-import {
-  Box,
-  Card,
-  Heading,
-  HStack,
-  SimpleGrid,
-  Text,
-  VStack
-} from '@chakra-ui/react';
+import { Box, Card, Heading, SimpleGrid, Text, VStack } from '@chakra-ui/react';
 
 interface SponsorCardProps {
   name: string;
@@ -49,7 +41,7 @@ export function SponsorsSection() {
         <Heading size="2xl">Our Sponsors</Heading>
         <Text flex={1} color="gray.400" textAlign="center">
           Thank you to all of our current sponsors! We rely on the support of
-          our sponsors to continue educasdasdsating the next generation of space
+          our sponsors to continue educating the next generation of space
           industry leaders.
         </Text>
       </VStack>

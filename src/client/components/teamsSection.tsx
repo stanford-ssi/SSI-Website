@@ -42,7 +42,7 @@ function TeamCard({ name, children }: TeamCardProps) {
 
 export function TeamsSection() {
   return (
-    <Stack spacing={8} py={16}>
+    <Stack spacing={8} my={16}>
       <VStack spacing={8} px={{ base: 6, md: 32 }}>
         <Heading size="2xl">Teams</Heading>
         <Text flex={1} color="gray.400" textAlign="center">

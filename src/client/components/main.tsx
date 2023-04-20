@@ -13,9 +13,9 @@ export function Main() {
     >
       <HeroSection />
       <TeamsSection />
+      <EventsSection />
       <SponsorsSection />
       <BlogSection />
-      <EventsSection />
     </Layout>
   );
 }

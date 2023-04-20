@@ -5,13 +5,14 @@ export interface PrimaryButtonProps extends ButtonProps {
   dark?: boolean;
 }
 
-export const PrimaryButton: ComponentWithAs<'button', PrimaryButtonProps> = (
-  props
-) => {
+export const PrimaryButton: ComponentWithAs<'button', PrimaryButtonProps> = ({
+  dark,
+  ...props
+}) => {
   return (
     <Button
-      bgGradient={props.dark ? undefined : primaryGradient}
-      bg={props.dark ? 'black' : undefined}
+      bgGradient={dark ? undefined : primaryGradient}
+      bg={dark ? 'black' : undefined}
       _hover={{
         opacity: 0.8
       }}

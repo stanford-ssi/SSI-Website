@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import Footer from './footer';
 
+import Footer from './footer';
 import Navigation from './navigation';
 
 export type LayoutProps = React.PropsWithChildren<{

@@ -1,4 +1,4 @@
-import { Heading, Image, Stack, Text } from '@chakra-ui/react';
+import { Heading, Image, Stack } from '@chakra-ui/react';
 
 export function PeopleSection() {
   return (

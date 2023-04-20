@@ -1,5 +1,4 @@
-import { Box, Heading, Text, VStack } from '@chakra-ui/react';
-import { primaryGradient } from 'client/theme';
+import { Heading, Text, VStack } from '@chakra-ui/react';
 import Image from 'next/image';
 
 import { PrimaryButton } from './primaryButton';
@@ -29,7 +28,6 @@ export function HeroSection() {
       >
         Join SSI
       </PrimaryButton>
-      {/* <Box w="100%" h="200px" bgGradient={primaryGradient} /> */}
     </VStack>
   );
 }

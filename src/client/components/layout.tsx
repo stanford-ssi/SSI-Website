@@ -25,7 +25,7 @@ export default function Layout({
 
         {/* Open Graph */}
         <meta property="og:type" content="article" />
-        <meta property="og:site_name" content="Moonshot" />
+        <meta property="og:site_name" content="Stanford SSI" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         {image && <meta property="og:image" content={image} />}

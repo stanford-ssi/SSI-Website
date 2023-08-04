@@ -1,4 +1,6 @@
-import { Box, HStack, Link, Text } from '@chakra-ui/react';
+import { Box, Heading, HStack, Link } from '@chakra-ui/react';
+import { transparentize } from '@chakra-ui/theme-tools';
+import { useTheme } from '@emotion/react';
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
 import React, { ReactElement } from 'react';
@@ -80,21 +82,30 @@ function NavLink({ href, children, newTab }: NavLinkProps): ReactElement {
 }
 
 export default function Navigation(): ReactElement {
+  const theme = useTheme();
+
   return (
     <Box
       px={{ base: 6, md: 32 }}
-      py={6}
+      py={4}
       position="sticky"
       top={0}
       width="full"
       zIndex={999}
-      bg="black"
+      background={transparentize('black', 0.1)(theme)}
+      backdropFilter="auto"
+      backdropBlur="5px"
+      as="nav"
     >
-      <HStack align="center" justify="space-between" spacing={4}>
+      <HStack
+        align="center"
+        justify="space-between"
+        spacing={{ base: 2, md: 4 }}
+      >
         <HStack spacing={4} width="full">
-          <Text>Stanford SSI</Text>
+          <Heading>SSI</Heading>
         </HStack>
-        <HStack as="nav" width="full" spacing={4} flex={1}>
+        <HStack as="nav" width="full" spacing={{ base: 2, md: 4 }} flex={1}>
           {routes.map(({ title, link, newTab }) => (
             <NavLink key={title} href={link} newTab={newTab}>
               {title}
@@ -104,6 +115,7 @@ export default function Navigation(): ReactElement {
             as="a"
             href="https://wiki.stanfordssi.org/How_to_Join_SSI"
             target="_blank"
+            size={{ base: 'sm', md: 'md' }}
           >
             Join
           </PrimaryButton>

@@ -1,6 +1,7 @@
 import {
   Box,
   Card,
+  Flex,
   Heading,
   HStack,
   Stack,
@@ -9,12 +10,13 @@ import {
 } from '@chakra-ui/react';
 import { primaryGradient } from 'client/theme';
 
+import { SECTION_MAX_WIDTH } from './constants';
 import { MapIcon } from './icons/mapIcon';
 import { PrimaryButton } from './primaryButton';
 
 function BackgroundChange() {
   return (
-    <VStack width="full" position="absolute" top={0} bottom={0}>
+    <VStack width="full" position="absolute" top={0} bottom={0} spacing={0}>
       <Box bg="gray.900" width="full" flex={1} />
       <Box bg="black" width="full" flex={1} />
     </VStack>
@@ -23,7 +25,7 @@ function BackgroundChange() {
 
 export function BlogSection() {
   return (
-    <Box position="relative" width="full">
+    <Flex position="relative" width="full" direction="column" align="center">
       <BackgroundChange />
       <Card
         mx={{ base: 6, md: 32 }}
@@ -31,27 +33,47 @@ export function BlogSection() {
         rounded="3xl"
         bgGradient={primaryGradient}
         color="white"
+        maxW={SECTION_MAX_WIDTH}
       >
         <HStack spacing={0}>
           <Stack
-            flex={1}
+            flex={16}
             px={{ base: 8, sm: 16, lg: 24 }}
             py={{ base: 6, sm: 14, lg: 20 }}
             spacing={4}
           >
             <Text flex={1}>Want to read more about SSI</Text>
             <Stack spacing={10}>
-              <Heading size="2xl">View our latest blog posts here</Heading>
-              <PrimaryButton dark width="fit-content">
-                View Posts
-              </PrimaryButton>
+              <Heading size="2xl">
+                Make sure to check out our newsletters here
+              </Heading>
+              <Stack spacing={4} align="start">
+                <HStack spacing={4}>
+                  <PrimaryButton
+                    dark
+                    as="a"
+                    href="https://drive.google.com/file/d/1caYB_Eq-HtT1MJl5XSrfiucPztSTFBUT/view"
+                    target="_blank"
+                  >
+                    View Latest
+                  </PrimaryButton>
+                  <PrimaryButton
+                    dark
+                    as="a"
+                    href="https://mailman.stanford.edu/mailman/listinfo/ssi_general"
+                    target="_blank"
+                  >
+                    Subscribe
+                  </PrimaryButton>
+                </HStack>
+              </Stack>
             </Stack>
           </Stack>
-          <Box flex={1} display={{ base: 'none', lg: 'initial' }}>
+          <Box flex={15} display={{ base: 'none', lg: 'initial' }}>
             <MapIcon />
           </Box>
         </HStack>
       </Card>
-    </Box>
+    </Flex>
   );
 }

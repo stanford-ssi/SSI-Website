@@ -1,5 +1,4 @@
 import { Button, ButtonProps, ComponentWithAs } from '@chakra-ui/react';
-import { primaryGradient } from 'client/theme';
 
 export interface PrimaryButtonProps extends ButtonProps {
   dark?: boolean;
@@ -11,8 +10,7 @@ export const PrimaryButton: ComponentWithAs<'button', PrimaryButtonProps> = ({
 }) => {
   return (
     <Button
-      bgGradient={dark ? undefined : primaryGradient}
-      bg={dark ? 'black' : undefined}
+      bg={dark ? 'black' : 'primary.300'}
       _hover={{
         opacity: 0.8
       }}

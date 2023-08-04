@@ -1,8 +1,10 @@
+import { EmailIcon } from '@chakra-ui/icons';
 import { Box, Button, HStack, Text } from '@chakra-ui/react';
 
-import { DiscordIcon } from './icons/discordIcon';
+import { InstagramIcon } from './icons/instagramIcon';
 import { LinkedInIcon } from './icons/linkedInIcon';
 import { TwitterIcon } from './icons/twitterIcon';
+import { YoutubeIcon } from './icons/youtubeIcon';
 
 type SocialButtonProps = React.PropsWithChildren<{
   href: string;
@@ -51,15 +53,21 @@ export default function Footer() {
             </Text>
           </Text>
         </HStack>
-        <HStack as="nav" width="full" spacing={4} flex={1}>
-          <SocialButton href="/">
+        <HStack as="nav" width="full" spacing={{ base: 2, md: 4 }} flex={1}>
+          <SocialButton href="https://twitter.com/stanfordssi">
             <TwitterIcon />
           </SocialButton>
-          <SocialButton href="/">
+          <SocialButton href="https://www.instagram.com/stanford_ssi/">
+            <InstagramIcon />
+          </SocialButton>
+          <SocialButton href="http://www.youtube.com/channel/UCbHZcWbCUjXiZ16Gb7ilOew">
+            <YoutubeIcon />
+          </SocialButton>
+          <SocialButton href="https://www.linkedin.com/groups/Stanford-Student-Space-Initiative-6774947">
             <LinkedInIcon />
           </SocialButton>
-          <SocialButton href="/">
-            <DiscordIcon />
+          <SocialButton href="mailto:space.initiative@stanford.edu">
+            <EmailIcon />
           </SocialButton>
         </HStack>
       </HStack>

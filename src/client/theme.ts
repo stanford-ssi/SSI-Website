@@ -50,5 +50,4 @@ export const theme = extendTheme({
   }
 });
 
-export const primaryGradient =
-  'linear(to-r, primary.500, primary.300, primary.100)';
+export const primaryGradient = 'linear(to-r, primary.500, primary.300)';

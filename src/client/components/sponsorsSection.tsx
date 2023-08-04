@@ -36,7 +36,7 @@ function SponsorCard({ name, tier }: SponsorCardProps) {
 
 export function SponsorsSection() {
   return (
-    <VStack spacing={2} py={16} bg="gray.900">
+    <VStack spacing={2} py={16} bg="gray.900" width="full">
       <VStack spacing={8} px={{ base: 6, md: 32 }}>
         <Heading size="2xl">Our Sponsors</Heading>
         <Text flex={1} color="gray.400" textAlign="center">

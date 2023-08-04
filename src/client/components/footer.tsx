@@ -57,16 +57,16 @@ export default function Footer() {
           <SocialButton href="https://twitter.com/stanfordssi">
             <TwitterIcon />
           </SocialButton>
-          <SocialButton href="https://www.instagram.com/stanford_ssi/">
+          <SocialButton href="https://www.instagram.com/stanfordssi/">
             <InstagramIcon />
           </SocialButton>
           <SocialButton href="http://www.youtube.com/channel/UCbHZcWbCUjXiZ16Gb7ilOew">
             <YoutubeIcon />
           </SocialButton>
-          <SocialButton href="https://www.linkedin.com/groups/Stanford-Student-Space-Initiative-6774947">
+          <SocialButton href="https://www.linkedin.com/company/stanford-ssi/">
             <LinkedInIcon />
           </SocialButton>
-          <SocialButton href="mailto:space.initiative@stanford.edu">
+          <SocialButton href="mailto:spaceinitiative@stanford.edu">
             <EmailIcon />
           </SocialButton>
         </HStack>

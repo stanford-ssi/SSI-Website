@@ -36,6 +36,7 @@ export const theme = extendTheme({
     },
     gray: {
       '400': '#9E9E9E',
+      '700': '#3B3B42',
       '800': '#222228',
       '900': '#18181C'
     },
@@ -49,5 +50,4 @@ export const theme = extendTheme({
   }
 });
 
-export const primaryGradient =
-  'linear(to-r, primary.500, primary.300, primary.100)';
+export const primaryGradient = 'linear(to-r, primary.500, primary.300)';

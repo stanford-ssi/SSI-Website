@@ -12,7 +12,7 @@ export type LayoutProps = React.PropsWithChildren<{
 export default function Layout({
   title,
   description,
-  image,
+  image = 'https://www.stanfordssi.org/images/banner.png',
   children
 }: LayoutProps) {
   return (
@@ -20,7 +20,7 @@ export default function Layout({
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
-        <meta name="theme-color" content="#ffffff" />
+        <meta name="theme-color" content="#000000" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
         {/* Open Graph */}
@@ -33,7 +33,7 @@ export default function Layout({
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="" />
+        <meta name="twitter:site" content="@stanfordssi" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         {image && <meta name="twitter:image" content={image} />}

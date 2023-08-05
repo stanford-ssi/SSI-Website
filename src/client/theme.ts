@@ -41,13 +41,13 @@ export const theme = extendTheme({
       '900': '#18181C'
     },
     primary: {
-      '100': '#EA8C55',
-      '300': '#C75146',
-      '500': '#AD2E24',
-      '700': '#81171B',
-      '900': '#540804'
+      '100': '#c9514a',
+      '300': '#BE1E2D',
+      '500': '#981623',
+      '700': '#7d121d',
+      '900': '#620e16'
     }
   }
 });
 
-export const primaryGradient = 'linear(to-r, primary.500, primary.300)';
+export const primaryGradient = 'linear(to-r, primary.500, primary.100)';

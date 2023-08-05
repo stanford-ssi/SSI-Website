@@ -52,7 +52,7 @@ export function BlogSection() {
                   <PrimaryButton
                     dark
                     as="a"
-                    href="https://drive.google.com/file/d/1caYB_Eq-HtT1MJl5XSrfiucPztSTFBUT/view"
+                    href="https://drive.google.com/file/d/1QP1e9jb2dl8Rbvx9QJt7ccOHyZqH9UPf/view"
                     target="_blank"
                   >
                     View Latest

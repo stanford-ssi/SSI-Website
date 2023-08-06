@@ -18,8 +18,8 @@ export function PeopleSection() {
             <Text>
               The Stanford Student Space Initiative (Stanford SSI) is
               Stanford&apos;s largest project-based student group, with more
-              than 300 dues-paying members, split into six project teams:
-              Rockets, Balloons, Satellites, Biology, Operations, and Policy.
+              than 300 members split into six project teams: Rockets,
+              Satellites, Balloons, Mars, Biology, and Policy.
             </Text>
             <Text>
               We are a completely student-run organization founded in 2013 with
@@ -40,14 +40,13 @@ export function PeopleSection() {
             </Text>
             <Text>
               SSI is dedicated to achieving both short- and long-term goals. In
-              the next year, we will leverage our balloon platforms to enable
-              groundbreaking research in hurricanes, demonstrate a self-driving
-              satellite system, and create the world&apos;s cheapest suborbital
-              access system by launch a rocket off a balloon into space. All the
-              while, we will continue to expand our mission of education and
-              inspiration across Stanford and the world, pushing the boundaries
-              of what is possible and doing our part to further the development
-              of the new space age.
+              the next year, we will build and launch more cubesats, work on a
+              rover to autonomously cross Antarctica, and develop a new hybrid
+              engine for a vertically landing rocket. All the while, we will
+              continue to expand our mission of education and inspiration across
+              Stanford and the world, pushing the boundaries of what is possible
+              and doing our part to further the development of the new space
+              age.
             </Text>
             <Text fontWeight="bold">We invite you to join us.</Text>
           </Stack>

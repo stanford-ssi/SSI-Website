@@ -3,9 +3,24 @@ import { extendTheme } from '@chakra-ui/react';
 export const theme = extendTheme({
   styles: {
     global: () => ({
+      html: {
+        height: 'full',
+        overflow: 'hidden'
+      },
       body: {
         bg: '#000000',
-        color: '#ffffff'
+        color: '#ffffff',
+        height: 'full',
+        display: 'flex',
+        flexDirection: 'column',
+        overflow: 'hidden'
+      },
+      '#__next': {
+        height: 'full',
+        display: 'flex',
+        flexDirection: 'column',
+        flex: 1,
+        overflow: 'hidden'
       }
     })
   },

@@ -289,7 +289,7 @@ export default function InstagramEmbed() {
           </p>
         </div>
       </blockquote>
-      <Script src="http://www.instagram.com/embed.js" />
+      <Script src="//www.instagram.com/embed.js" />
     </>
   );
 }

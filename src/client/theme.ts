@@ -21,6 +21,12 @@ export const theme = extendTheme({
         flexDirection: 'column',
         flex: 1,
         overflow: 'hidden'
+      },
+      '.instagram-media': {
+        border: 'none !important'
+      },
+      '.instagram-media-rendered': {
+        border: '1px solid rgb(219, 219, 219) !important'
       }
     })
   },

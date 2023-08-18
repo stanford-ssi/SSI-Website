@@ -1,4 +1,10 @@
-import { Heading, Image as ChakraImage, Text, VStack } from '@chakra-ui/react';
+import {
+  Heading,
+  HStack,
+  Image as ChakraImage,
+  Text,
+  VStack
+} from '@chakra-ui/react';
 import { motion, MotionValue, useScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
 
@@ -56,13 +62,25 @@ export function HeroSection() {
             Stanford Student Space Initiative
           </Text>
         </VStack>
-        <PrimaryButton
-          as="a"
-          href="https://wiki.stanfordssi.org/How_to_Join_SSI"
-          target="_blank"
-        >
-          Join SSI
-        </PrimaryButton>
+        <HStack>
+          <PrimaryButton
+            as="a"
+            href="mailto:spaceinitiative@stanford.edu"
+            color="gray.700"
+            target="_blank"
+            style={{ marginRight: 10 }}
+          >
+            Contact
+          </PrimaryButton>
+          <PrimaryButton
+            as="a"
+            href="https://wiki.stanfordssi.org/How_to_Join_SSI"
+            target="_blank"
+            style={{ marginLeft: 10 }}
+          >
+            Join SSI
+          </PrimaryButton>
+        </HStack>
       </VStack>
     </>
   );

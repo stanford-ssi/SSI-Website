@@ -1,9 +1,20 @@
-import { Box, Heading, HStack, Link } from '@chakra-ui/react';
+import { HamburgerIcon } from '@chakra-ui/icons';
+import {
+  Box,
+  Heading,
+  HStack,
+  IconButton,
+  Link,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuList
+} from '@chakra-ui/react';
 import { transparentize } from '@chakra-ui/theme-tools';
 import { useTheme } from '@emotion/react';
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
-import React, { ReactElement } from 'react';
+import React, { ReactElement, useEffect, useState } from 'react';
 
 import { PrimaryButton } from './primaryButton';
 
@@ -22,6 +33,11 @@ const routes = [
   {
     title: 'Home',
     link: '/',
+    newTab: false
+  },
+  {
+    title: 'Leadership',
+    link: '/leadership',
     newTab: false
   },
   {
@@ -89,6 +105,18 @@ function NavLink({ href, children, newTab }: NavLinkProps): ReactElement {
 export default function Navigation(): ReactElement {
   const theme = useTheme();
 
+  const [width, setWidth] = useState<number>(0);
+
+  useEffect(() => {
+    setWidth(window.innerWidth);
+    window.addEventListener('resize', () => setWidth(window.innerWidth));
+    return () => {
+      window.removeEventListener('resize', () => setWidth(window.innerWidth));
+    };
+  }, []);
+
+  const isMobile = width <= 768;
+
   return (
     <Box
       px={{ base: 6, md: 32 }}
@@ -108,7 +136,9 @@ export default function Navigation(): ReactElement {
         spacing={{ base: 2, md: 4 }}
       >
         <HStack spacing={4} width="full">
-          <Heading>SSI</Heading>
+          <Link href="/" style={{ textDecoration: 'none' }}>
+            <Heading>SSI</Heading>
+          </Link>
         </HStack>
         <HStack
           as="nav"
@@ -116,11 +146,12 @@ export default function Navigation(): ReactElement {
           spacing={{ base: 0, sm: 2, md: 4 }}
           flex={1}
         >
-          {routes.map(({ title, link, newTab }) => (
-            <NavLink key={title} href={link} newTab={newTab}>
-              {title}
-            </NavLink>
-          ))}
+          {!isMobile &&
+            routes.map(({ title, link, newTab }) => (
+              <NavLink key={title} href={link} newTab={newTab}>
+                {title}
+              </NavLink>
+            ))}
           <PrimaryButton
             as="a"
             href="https://wiki.stanfordssi.org/How_to_Join_SSI"
@@ -129,6 +160,23 @@ export default function Navigation(): ReactElement {
           >
             Join
           </PrimaryButton>
+          {isMobile && (
+            <Menu>
+              <MenuButton
+                as={IconButton}
+                aria-label="Options"
+                icon={<HamburgerIcon />}
+                variant="outline"
+              />
+              <MenuList>
+                {routes.map(({ title, link, newTab }) => (
+                  <MenuItem as="a" key={title} href={link}>
+                    {title}
+                  </MenuItem>
+                ))}
+              </MenuList>
+            </Menu>
+          )}
         </HStack>
       </HStack>
     </Box>

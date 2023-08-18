@@ -1,4 +1,5 @@
 import {
+  Box,
   Heading,
   HStack,
   Image as ChakraImage,
@@ -6,9 +7,14 @@ import {
   VStack
 } from '@chakra-ui/react';
 import { motion, MotionValue, useScroll, useTransform } from 'framer-motion';
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
 
 import { PrimaryButton } from './primaryButton';
+
+const InstagramEmbed = dynamic(() => import('./instagramEmbed'), {
+  ssr: false
+});
 
 function useParallax(value: MotionValue<number>, start: number, end: number) {
   return useTransform(value, [0, 1], [start, end]);
@@ -81,6 +87,9 @@ export function HeroSection() {
             Join SSI
           </PrimaryButton>
         </HStack>
+        <Box>
+          <InstagramEmbed />
+        </Box>
       </VStack>
     </>
   );

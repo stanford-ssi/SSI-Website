@@ -3,10 +3,10 @@ import { theme } from 'client/theme';
 import { trpc } from 'client/trpc';
 import type { AppProps } from 'next/app';
 
-function App({ Component, ...rest }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider resetCSS theme={theme}>
-      <Component {...rest} />
+      <Component {...pageProps} />
     </ChakraProvider>
   );
 }

@@ -25,6 +25,11 @@ const routes = [
     newTab: false
   },
   {
+    title: 'Blog',
+    link: '/blog',
+    newTab: false
+  },
+  {
     title: 'Alumni',
     link: 'http://wiki.stanfordssi.org/How_to_Join_SSI%27s_Alumni_Network',
     newTab: true
@@ -105,7 +110,12 @@ export default function Navigation(): ReactElement {
         <HStack spacing={4} width="full">
           <Heading>SSI</Heading>
         </HStack>
-        <HStack as="nav" width="full" spacing={{ base: 2, md: 4 }} flex={1}>
+        <HStack
+          as="nav"
+          width="full"
+          spacing={{ base: 0, sm: 2, md: 4 }}
+          flex={1}
+        >
           {routes.map(({ title, link, newTab }) => (
             <NavLink key={title} href={link} newTab={newTab}>
               {title}

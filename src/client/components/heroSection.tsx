@@ -28,7 +28,7 @@ function Background() {
     <motion.div
       style={{
         position: 'fixed',
-        top: y,
+        top: 0,
         left: 0,
         right: 0,
         height: '100vh',

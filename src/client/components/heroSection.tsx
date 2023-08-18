@@ -87,9 +87,9 @@ export function HeroSection() {
             Join SSI
           </PrimaryButton>
         </HStack>
-        <Box>
+        {/* <Box>
           <InstagramEmbed />
-        </Box>
+        </Box> */}
       </VStack>
     </>
   );

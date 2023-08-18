@@ -37,7 +37,7 @@ const teams: Readonly<Team[]> = [
     name: 'Rockets',
     icon: <RocketsIcon />,
     description:
-      'Making aerodynamic objects propel unique payloads to high altitudes since 2013, the Rockets team has certified over 35 members of SSI for high powered rocketry. In addition to a bid for IREC 2017, the team will continue work on Project Daedalus, a series of smaller projects to increase expertise in all aspects of rocketry.'
+      'Pushing the limits of high power rocketry since 2013, the Rockets team is keeping pace with trending engineering challenges by building aerodynamic vehicles that propel innovative payloads into the air! With their obsessive dedication to things that go up really fast, the team is always striving to put its hard-earned hands-on skills to the test in explosive environments.'
   },
   {
     name: 'Satellites',
@@ -55,7 +55,7 @@ const teams: Readonly<Team[]> = [
     name: 'Operations',
     icon: <OperationsIcon />,
     description:
-      "In addition to facilitating events among members, the Operations team brings speakers to Stanford and connects members with industry professionals and aerospace entrepreneurs. They're currently working towards Stanford SSI + Industry Space Night, an evening of networking SSI will host in early January."
+      "Operations supports the rest of SSI's teams to create a productive, inclusive, and engaged community of engineers and space enthusiasts. The operations team plans parties, hosts events with sponsors and alumni, manages our workspace, and much more!"
   },
   {
     name: 'Policy',

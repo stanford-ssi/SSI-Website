@@ -77,7 +77,9 @@ export const LeadershipTile = (props: LeadershipTileProps) => {
         borderRadius="0 0 20px 20px"
         padding="15px"
       >
-        <Heading size="md">{leader.name}</Heading>
+        <Heading size="md" fontSize={'large'}>
+          {leader.name}
+        </Heading>
         <Text>{leader.position}</Text>
         {isHover && (
           <>

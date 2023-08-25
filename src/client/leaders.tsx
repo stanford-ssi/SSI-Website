@@ -53,5 +53,18 @@ export const leaders: LeaderInfo[] = [
     img: '/images/michael.jpg',
     email: 'mjyu@stanford.edu',
     linkedIn: 'https://www.linkedin.com/in/michael-yu-ab5800120/'
+  },
+  {
+    name: 'Vassilis Alexopoulos',
+    position: 'Biology Co-Lead',
+    img: '/images/vassilis.jpg',
+    email: 'valex@stanford.edu',
+    linkedIn: 'https://www.linkedin.com/in/valexopa/'
+  },
+  {
+    name: 'Michelle Park',
+    position: 'Public Relations Manager',
+    img: '/images/michelle.jpg',
+    email: 'michpark@stanford.edu'
   }
 ];

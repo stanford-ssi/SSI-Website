@@ -13,7 +13,8 @@ export const leaders: LeaderInfo[] = [
     name: 'Angelina Krinos',
     position: 'Co-President',
     img: '/images/angelina.jpg',
-    email: 'akrinos@stanford.edu'
+    email: 'akrinos@stanford.edu',
+    linkedIn: 'https://www.linkedin.com/in/angelina-krinos/'
   },
   {
     name: 'Lawton Skaling',

@@ -56,7 +56,7 @@ export const LeadershipTile = (props: LeadershipTileProps) => {
   const [isHover, setIsHover] = useState<boolean>(false);
   return (
     <Box
-      width="15em"
+      width="16em"
       style={{
         margin: 15,
         marginBottom: isHover ? 0 : 25,

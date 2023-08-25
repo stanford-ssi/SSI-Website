@@ -1,6 +1,6 @@
-import { Heading, HStack, Stack, Text } from '@chakra-ui/react';
+import { Heading, Stack, Text } from '@chakra-ui/react';
 import Layout from 'client/components/layout';
-import { leaders } from 'pages/leadership/leaders';
+import { leaders } from 'client/leaders';
 
 import { LeadershipTile } from './leadershipTile';
 

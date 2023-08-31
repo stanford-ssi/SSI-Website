@@ -1,3 +1,4 @@
+import { Flex, Stack } from '@chakra-ui/react';
 import Head from 'next/head';
 
 import Footer from './footer';
@@ -39,11 +40,13 @@ export default function Layout({
         {image && <meta name="twitter:image" content={image} />}
         {image && <meta name="twitter:image:alt" content={title} />}
       </Head>
-      <main>
+      <Stack height="full" spacing={0} overflow="auto">
         <Navigation />
-        {children}
-      </main>
-      <Footer />
+        <Flex as="main" flexDirection="column" flex={1} justifyContent="start">
+          {children}
+        </Flex>
+        <Footer />
+      </Stack>
     </>
   );
 }

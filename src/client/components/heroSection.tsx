@@ -1,8 +1,20 @@
-import { Heading, Image as ChakraImage, Text, VStack } from '@chakra-ui/react';
+import {
+  Box,
+  Heading,
+  HStack,
+  Image as ChakraImage,
+  Text,
+  VStack
+} from '@chakra-ui/react';
 import { motion, MotionValue, useScroll, useTransform } from 'framer-motion';
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
 
 import { PrimaryButton } from './primaryButton';
+
+const InstagramEmbed = dynamic(() => import('./instagramEmbed'), {
+  ssr: false
+});
 
 function useParallax(value: MotionValue<number>, start: number, end: number) {
   return useTransform(value, [0, 1], [start, end]);
@@ -16,7 +28,7 @@ function Background() {
     <motion.div
       style={{
         position: 'fixed',
-        top: y,
+        top: 0,
         left: 0,
         right: 0,
         height: '100vh',
@@ -56,13 +68,28 @@ export function HeroSection() {
             Stanford Student Space Initiative
           </Text>
         </VStack>
-        <PrimaryButton
-          as="a"
-          href="https://wiki.stanfordssi.org/How_to_Join_SSI"
-          target="_blank"
-        >
-          Join SSI
-        </PrimaryButton>
+        <HStack>
+          <PrimaryButton
+            as="a"
+            href="mailto:spaceinitiative@stanford.edu"
+            color="gray.700"
+            target="_blank"
+            style={{ marginRight: 10 }}
+          >
+            Contact
+          </PrimaryButton>
+          <PrimaryButton
+            as="a"
+            href="https://wiki.stanfordssi.org/How_to_Join_SSI"
+            target="_blank"
+            style={{ marginLeft: 10 }}
+          >
+            Join SSI
+          </PrimaryButton>
+        </HStack>
+        {/* <Box>
+          <InstagramEmbed />
+        </Box> */}
       </VStack>
     </>
   );

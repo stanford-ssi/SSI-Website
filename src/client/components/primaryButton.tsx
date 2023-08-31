@@ -2,15 +2,17 @@ import { Button, ButtonProps, ComponentWithAs } from '@chakra-ui/react';
 
 export interface PrimaryButtonProps extends ButtonProps {
   dark?: boolean;
+  color?: string;
 }
 
 export const PrimaryButton: ComponentWithAs<'button', PrimaryButtonProps> = ({
   dark,
+  color,
   ...props
 }) => {
   return (
     <Button
-      bg={dark ? 'black' : 'primary.300'}
+      bg={color || (dark ? 'black' : 'primary.300')}
       _hover={{
         opacity: 0.8
       }}

@@ -40,11 +40,11 @@ const routes = [
     link: '/leadership',
     newTab: false
   },
-  {
-    title: 'Blog',
-    link: '/blog',
-    newTab: false
-  },
+  // {
+  //   title: 'Blog',
+  //   link: '/blog',
+  //   newTab: false
+  // },
   {
     title: 'Alumni',
     link: 'http://wiki.stanfordssi.org/How_to_Join_SSI%27s_Alumni_Network',

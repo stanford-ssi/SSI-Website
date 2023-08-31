@@ -100,6 +100,12 @@ export function BlogPage({ recordMap, pageId }: BlogPageProps) {
    * @returns The new URL with Notion-specific parameters.
    */
   function convertToNotionImageUrl(originalUrl: string): string {
+    if (originalUrl.startsWith('/images')) {
+      return `https://stanfordssi.notion.site${originalUrl}`;
+    }
+    if (!originalUrl.includes('secure.notion-static.com')) {
+      return originalUrl;
+    }
     // Encode the original URL so it can be embedded within another URL
     const encodedUrl = encodeURIComponent(originalUrl);
 

@@ -51,8 +51,6 @@ export function BlogPage({ recordMap, pageId }: BlogPageProps) {
     ? recordMap.block[pageId].value
     : undefined;
 
-  console.log(pageBlock);
-
   function formatTimestamp(unixTimestamp: number): string {
     const date = new Date(unixTimestamp);
 
@@ -121,7 +119,7 @@ export function BlogPage({ recordMap, pageId }: BlogPageProps) {
   }
 
   function renderCoverImg() {
-    if (!pageBlock) {
+    if (!pageBlock?.format?.page_cover) {
       return null;
     }
     return (

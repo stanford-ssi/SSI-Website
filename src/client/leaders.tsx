@@ -48,6 +48,13 @@ export const leaders: LeaderInfo[] = [
     linkedIn: 'https://www.linkedin.com/in/jonathansiskind/'
   },
   {
+    name: 'Ashley Raigosa',
+    position: 'Satellites Co-Lead',
+    img: '/images/ashley.jpg',
+    email: 'raigosa@stanford.edu',
+    linkedIn: 'https://www.linkedin.com/in/ashleyraigosa/'
+  },
+  {
     name: 'Theo Makler',
     position: 'Satellites Co-Lead',
     img: '/images/theo.jpg',

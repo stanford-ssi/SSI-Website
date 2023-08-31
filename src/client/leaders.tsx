@@ -27,18 +27,18 @@ export const leaders: LeaderInfo[] = [
     youtube: 'https://www.youtube.com/@lskaling'
   },
   {
-    name: 'Will Neal-Boyd',
-    position: 'Mars Co-Lead',
-    img: '/images/will.jpg',
-    email: 'willnb@stanford.edu',
-    linkedIn: 'https://www.linkedin.com/in/will-neal-boyd-138095242/'
-  },
-  {
     name: 'Evelyn Nutt',
     position: 'Rockets Co-Lead',
     img: '/images/evelyn.jpg',
     email: 'evelynan@stanford.edu',
     linkedIn: 'https://www.linkedin.com/in/evelyn-nutt-28a0661b1'
+  },
+  {
+    name: 'Will Neal-Boyd',
+    position: 'Mars Co-Lead',
+    img: '/images/will.jpg',
+    email: 'willnb@stanford.edu',
+    linkedIn: 'https://www.linkedin.com/in/will-neal-boyd-138095242/'
   },
   {
     name: 'Jay (Jonathan) Siskind',
@@ -48,11 +48,27 @@ export const leaders: LeaderInfo[] = [
     linkedIn: 'https://www.linkedin.com/in/jonathansiskind/'
   },
   {
+    name: 'Theo Makler',
+    position: 'Satellites Co-Lead',
+    img: '/images/theo.jpg',
+    email: 'theo24@stanford.edu',
+    linkedIn: 'https://www.linkedin.com/in/theo-makler-25107421a/',
+    instagram: 'https://www.instagram.com/theo.makler/'
+  },
+  {
     name: 'Michael Yu',
     position: 'Balloons Co-Lead',
     img: '/images/michael.jpg',
     email: 'mjyu@stanford.edu',
     linkedIn: 'https://www.linkedin.com/in/michael-yu-ab5800120/'
+  },
+  {
+    name: 'Luis Arizmendi',
+    position: 'Balloons Co-Lead',
+    img: '/images/luis.jpg',
+    email: 'larizmen@stanford.edu',
+    linkedIn:
+      'https://www.linkedin.com/in/yourlinkedin/luis-arizmendi-6a2381197'
   },
   {
     name: 'Vassilis Alexopoulos',
@@ -62,9 +78,28 @@ export const leaders: LeaderInfo[] = [
     linkedIn: 'https://www.linkedin.com/in/valexopa/'
   },
   {
+    name: 'Keshav Saigal',
+    position: 'Biology Co-Lead',
+    img: '/images/keshav.jpg',
+    email: 'ksaigal@stanford.edu'
+  },
+  {
+    name: 'James Wall',
+    position: 'Policy Co-Lead',
+    img: '/images/james.jpg',
+    email: 'jameswall@stanford.edu',
+    linkedIn: 'https://www.linkedin.com/in/jamesmgwall/'
+  },
+  {
     name: 'Michelle Park',
     position: 'Public Relations Manager',
     img: '/images/michelle.jpg',
     email: 'michpark@stanford.edu'
+  },
+  {
+    name: 'Leo Glikbarg',
+    position: 'Safety Lead',
+    img: '/images/leo.jpg',
+    email: 'lglik@stanford.edu'
   }
 ];

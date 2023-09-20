@@ -9,7 +9,7 @@ import { Block, ExtendedRecordMap } from 'notion-types';
 import { getPageTitle } from 'notion-utils';
 import { NotionRenderer } from 'react-notion-x';
 
-export const ROOT_NOTION_PAGE_ID = '1330267220a044bc8eaacf01e4caa024';
+export const ROOT_NOTION_PAGE_ID = 'SSI-Blog-722cf1326728402298c0f83b004faf9e';
 
 const Code = dynamic(() =>
   import('react-notion-x/build/third-party/code').then((m) => m.Code)
@@ -41,6 +41,7 @@ export interface BlogPageProps {
 }
 
 export function BlogPage({ recordMap, pageId }: BlogPageProps) {
+  console.log(recordMap);
   if (!recordMap) {
     return null;
   }
@@ -99,11 +100,9 @@ export function BlogPage({ recordMap, pageId }: BlogPageProps) {
    */
   function convertToNotionImageUrl(originalUrl: string): string {
     if (originalUrl.startsWith('/images')) {
-      return `https://stanfordssi.notion.site${originalUrl}`;
+      return `https://stanford-ssi.notion.site${originalUrl}`;
     }
-    if (!originalUrl.includes('secure.notion-static.com')) {
-      return originalUrl;
-    }
+
     // Encode the original URL so it can be embedded within another URL
     const encodedUrl = encodeURIComponent(originalUrl);
 
@@ -113,8 +112,7 @@ export function BlogPage({ recordMap, pageId }: BlogPageProps) {
     const id = pageId;
 
     // Construct the new URL
-    const newUrl = `https://stanfordssi.notion.site/image/${encodedUrl}?table=${table}&id=${id}`;
-
+    const newUrl = `https://stanford-ssi.notion.site/image/${encodedUrl}?table=${table}&id=${id}`;
     return newUrl;
   }
 

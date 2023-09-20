@@ -98,6 +98,12 @@ export const leaders: LeaderInfo[] = [
     linkedIn: 'https://www.linkedin.com/in/jamesmgwall/'
   },
   {
+    name: 'Matthew Nguyen',
+    position: 'Workspace Manager',
+    img: '/images/matthew.jpg',
+    email: 'mbfly@stanford.edu'
+  },
+  {
     name: 'Michelle Park',
     position: 'Public Relations Manager',
     img: '/images/michelle.jpg',

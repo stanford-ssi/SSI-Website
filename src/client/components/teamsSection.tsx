@@ -67,7 +67,7 @@ const teams: Readonly<Team[]> = [
     name: 'Mars',
     icon: <MarsIcon />,
     description:
-      'The SSI Mars team seeks to push the boundaries of crewed space missions and pave the way for permanent settlement of Mars and other celestial bodies. Our projects are centered on in situ resource utilization (ISRU), a broad group of technologies which make use of the scant resources on Mars for long-term surface missions. We turn Martian air and soil into fuel and concrete, eliminating the need to launch everything from Earth. At the same time, ISRU technologies can sustainably produce fuel and building materials for use on Earth, making our work a crucial step in fighting climate change. If we learn to live on the Red Planet, we can also save the blue one!'
+      "The SSI Mars team is revolutionizing space missions! Our Polar Rover will autonomously trek 100km across Antarctica, mimicking Mars. The Mars Bricks subteam tests building with Martian materials, even experimenting in space! Teaming with Astrolab, our Mars Excavator digs into lunar soil. All projects aren't just Mars-bound; they're green solutions to help save Earth too!"
   }
 ];
 

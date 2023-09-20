@@ -16,11 +16,13 @@ export const getStaticPaths: GetStaticPaths = () => {
 export const getStaticProps: GetStaticProps<BlogPageProps> = async (
   context
 ) => {
-  const page = await notion.getPage(String(context.params?.pageId));
+  const pageId = String(context.params?.pageId);
+  const page = await notion.getPage(pageId);
 
   return {
     props: {
       recordMap: page,
+      pageId,
       revalidate: 10
     }
   };

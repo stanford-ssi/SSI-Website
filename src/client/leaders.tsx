@@ -2,20 +2,33 @@ import { LeaderInfo } from 'client/components/leadershipTile';
 
 export const leaders: LeaderInfo[] = [
   {
-    name: 'Elijah Kim',
+    name: 'Michelle Park',
     position: 'Co-President',
-    img: '/images/elijah.jpg',
-    email: 'elijahkim@stanford.edu',
-    linkedIn: 'https://www.linkedin.com/in/elijah-kim/',
-    twitter: 'https://twitter.com/bimikit'
+    img: '/images/michelle.jpg',
+    email: 'michpark@stanford.edu'
   },
   {
-    name: 'Angelina Krinos',
+    name: 'Ashley Raigosa',
     position: 'Co-President',
-    img: '/images/angelina.jpg',
-    email: 'akrinos@stanford.edu',
-    linkedIn: 'https://www.linkedin.com/in/angelina-krinos/'
+    img: '/images/ashley.jpg',
+    email: 'raigosa@stanford.edu',
+    linkedIn: 'https://www.linkedin.com/in/ashleyraigosa/'
   },
+  // {
+  //   name: 'Elijah Kim',
+  //   position: 'Co-President',
+  //   img: '/images/elijah.jpg',
+  //   email: 'elijahkim@stanford.edu',
+  //   linkedIn: 'https://www.linkedin.com/in/elijah-kim/',
+  //   twitter: 'https://twitter.com/bimikit'
+  // },
+  // {
+  //   name: 'Angelina Krinos',
+  //   position: 'Co-President',
+  //   img: '/images/angelina.jpg',
+  //   email: 'akrinos@stanford.edu',
+  //   linkedIn: 'https://www.linkedin.com/in/angelina-krinos/'
+  // },
   {
     name: 'Lawton Skaling',
     position: 'Operations Lead',
@@ -46,13 +59,6 @@ export const leaders: LeaderInfo[] = [
     img: '/images/jay.jpg',
     email: 'jsiskind@stanford.edu',
     linkedIn: 'https://www.linkedin.com/in/jonathansiskind/'
-  },
-  {
-    name: 'Ashley Raigosa',
-    position: 'Satellites Co-Lead',
-    img: '/images/ashley.jpg',
-    email: 'raigosa@stanford.edu',
-    linkedIn: 'https://www.linkedin.com/in/ashleyraigosa/'
   },
   {
     name: 'Theo Makler',
@@ -102,12 +108,6 @@ export const leaders: LeaderInfo[] = [
     position: 'Workspace Manager',
     img: '/images/matthew.jpg',
     email: 'mbfly@stanford.edu'
-  },
-  {
-    name: 'Michelle Park',
-    position: 'Public Relations Manager',
-    img: '/images/michelle.jpg',
-    email: 'michpark@stanford.edu'
   },
   {
     name: 'Leo Glikbarg',

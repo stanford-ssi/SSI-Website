@@ -154,7 +154,7 @@ export default function Navigation(): ReactElement {
             ))}
           <PrimaryButton
             as="a"
-            href="https://wiki.stanfordssi.org/How_to_Join_SSI"
+            href="https://spaceport.stanford.edu/joining-ssi"
             target="_blank"
             size={{ base: 'sm', md: 'md' }}
           >

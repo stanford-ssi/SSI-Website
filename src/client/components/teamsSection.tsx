@@ -43,7 +43,7 @@ const teams: Readonly<Team[]> = [
     name: 'Satellites',
     icon: <SatelliteIcon />,
     description:
-      "The Satellites team has launched a variety of imaging, scientific, and optical communications CubeSats. They're currently working on an open-source 3U imaging CubeSat—about three ducks—to prove automous orbit determination and software defined downlinking."
+      "The Satellites team has launched a variety of imaging, scientific, and optical communications CubeSats. They're currently working on a 2U imaging CubeSat called SAMWISE to demo a deployable solar array, a star-tracker, improved attitude control, and S-band communication."
   },
   {
     name: 'Biology',

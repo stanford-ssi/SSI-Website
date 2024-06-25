@@ -1,7 +1,7 @@
 import { Box, Heading, HStack, Text, VStack, Grid } from '@chakra-ui/react';
 import { motion, useTransform, useViewportScroll } from 'framer-motion';
 import dynamic from 'next/dynamic';
-import Image from "next/legacy/image"; // Import next/image for optimized image loading
+import Image from 'next/image'; // Import next/image for optimized image loading
 
 import { PrimaryButton } from './primaryButton';
 
@@ -35,9 +35,13 @@ function HeroSection() {
         <Image
           src="/images/mars.jpg"
           alt="Space"
-          layout="fill"
-          objectFit="cover"
-          quality={100} // Adjust image quality as needed
+          // Adjust image quality as needed
+          quality={100}
+          fill
+          sizes="100vw"
+          style={{
+            objectFit: 'cover'
+          }}
         />
       </motion.div>
       <Grid
@@ -53,6 +57,10 @@ function HeroSection() {
             src="/images/logo.png"
             width={128}
             height={128}
+            style={{
+              maxWidth: '100%',
+              height: 'auto'
+            }}
           />
           <VStack spacing={4} alignItems="center">
             <Heading

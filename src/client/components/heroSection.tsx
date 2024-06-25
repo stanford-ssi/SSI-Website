@@ -1,7 +1,7 @@
 import { Box, Heading, HStack, Text, VStack, Grid } from '@chakra-ui/react';
 import { motion, useTransform, useViewportScroll } from 'framer-motion';
 import dynamic from 'next/dynamic';
-import Image from 'next/image'; // Import next/image for optimized image loading
+import Image from "next/legacy/image"; // Import next/image for optimized image loading
 
 import { PrimaryButton } from './primaryButton';
 

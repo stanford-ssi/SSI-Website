@@ -1,8 +1,7 @@
 import { Box, Grid, Heading, HStack, Text, VStack } from '@chakra-ui/react';
-import { motion, useTransform, useViewportScroll } from 'framer-motion';
+import { motion, useTransform, useScroll } from 'framer-motion';
 import dynamic from 'next/dynamic';
-import Image from 'next/image'; // Import next/image for optimized image loading
-
+import Image from 'next/image';
 import { PrimaryButton } from './primaryButton';
 
 const InstagramEmbed = dynamic(() => import('./instagramEmbed'), {
@@ -10,7 +9,7 @@ const InstagramEmbed = dynamic(() => import('./instagramEmbed'), {
 });
 
 function HeroSection() {
-  const { scrollYProgress } = useViewportScroll();
+  const { scrollYProgress } = useScroll();
 
   // Define the range for scrollYProgress (typically 0 to 1)
   const yRange = [0, 1];
@@ -35,10 +34,10 @@ function HeroSection() {
         <Image
           src="/images/mars.jpg"
           alt="Mars"
-          quality={100}
           fill
           style={{ objectFit: 'cover' }}
-          loading="eager"
+          quality={100}
+          priority={true}
         />
       </motion.div>
       <Grid
@@ -48,43 +47,33 @@ function HeroSection() {
         position="relative"
         alignItems="center"
       >
-        <VStack spacing={8} alignItems="center" textAlign="center">
-          <Box
-            width="128px"
-            height="128px"
-            position="relative"
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
+        <VStack spacing={8}>
+          <Image
+            src="/images/logo.png"
+            alt="Stanford SSI"
+            width={128}
+            height={128}
+            quality={100}
+          />
+          <Heading
+            as="h1"
+            fontSize={{ base: '5xl', md: '6xl' }}
+            fontFamily="var(--font-workbench)"
+            fontWeight="thin"
           >
-            <Image
-              src="/images/logo.png"
-              alt="Stanford SSI"
-              width={128}
-              height={128}
-              layout="fixed"
-              objectFit="contain"
-              loading="eager"
-              quality={100}
-            />
-          </Box>
-          <VStack spacing={4} alignItems="center">
-            <Heading
-              as="h1"
-              size="3xl"
-              textAlign="center"
-              fontFamily="var(--font-workbench)"
-              fontWeight="thin"
-            >
-              Stanford{' '}
-              <Text as="span" color="primary.300">
-                SSI
-              </Text>
-            </Heading>
-            <Text color="gray.400" textAlign="center">
-              Stanford Student Space Initiative
+            Stanford{' '}
+            <Text as="span" color="primary.300">
+              SSI
             </Text>
-          </VStack>
+          </Heading>
+          <Text
+            color="white"
+            fontSize={{ base: '2xl', md: '3xl' }}
+            fontFamily="var(--font-archivo)"
+            fontWeight="semibold"
+          >
+            Ad Astra Per Aspera
+          </Text>
           <HStack>
             <PrimaryButton
               as="a"

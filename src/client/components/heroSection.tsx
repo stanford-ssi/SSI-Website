@@ -51,6 +51,7 @@ function HeroSection() {
           <Image
             src="/images/logo.png"
             alt="Stanford SSI"
+            quality={100}
             width={128}
             height={128}
             style={{

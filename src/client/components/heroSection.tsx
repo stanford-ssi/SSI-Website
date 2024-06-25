@@ -49,17 +49,25 @@ function HeroSection() {
         alignItems="center"
       >
         <VStack spacing={8} alignItems="center" textAlign="center">
-          <Image
-            src="/images/logo.png"
-            alt="Stanford SSI"
-            quality={100}
-            width={128}
-            height={128}
-            style={{
-              maxWidth: '100%',
-              height: 'auto'
-            }}
-          />
+          <Box
+            width="128px"
+            height="128px"
+            position="relative"
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+          >
+            <Image
+              src="/images/logo.png"
+              alt="Stanford SSI"
+              width={128}
+              height={128}
+              layout="fixed"
+              objectFit="contain"
+              loading="eager"
+              quality={100}
+            />
+          </Box>
           <VStack spacing={4} alignItems="center">
             <Heading
               as="h1"

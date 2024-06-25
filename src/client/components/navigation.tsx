@@ -15,7 +15,7 @@ import { useTheme } from '@emotion/react';
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
 import React, { ReactElement, useEffect, useState } from 'react';
-
+import Image from 'next/image';
 import { PrimaryButton } from './primaryButton';
 
 type NavLinkWrapperProps = React.PropsWithChildren<{
@@ -136,8 +136,25 @@ export default function Navigation(): ReactElement {
         spacing={{ base: 2, md: 4 }}
       >
         <HStack spacing={4} width="full">
-          <Link href="/" style={{ textDecoration: 'none' }}>
-            <Heading>SSI</Heading>
+          <Link
+            href="/"
+            style={{ textDecoration: 'none' }}
+            display="flex"
+            alignItems="center"
+          >
+            <Image
+              src="/images/LogoOnly.svg"
+              alt="Stanford SSI"
+              width={50}
+              height={50}
+            />
+            <Heading
+              fontFamily="var(--font-workbench)"
+              fontWeight="thin"
+              color="primary.300"
+            >
+              SSI
+            </Heading>
           </Link>
         </HStack>
         <HStack

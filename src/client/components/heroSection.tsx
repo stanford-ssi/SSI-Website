@@ -38,7 +38,6 @@ function HeroSection() {
           quality={100}
           fill
           style={{ objectFit: 'cover' }}
-          loading="eager"
         />
       </motion.div>
       <Grid
@@ -50,8 +49,8 @@ function HeroSection() {
       >
         <VStack spacing={8} alignItems="center" textAlign="center">
           <Image
-            alt="Stanford SSI"
             src="/images/logo.png"
+            alt="Stanford SSI"
             width={128}
             height={128}
             style={{

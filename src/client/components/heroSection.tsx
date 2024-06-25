@@ -1,4 +1,4 @@
-import { Box, Heading, HStack, Text, VStack, Grid } from '@chakra-ui/react';
+import { Box, Grid, Heading, HStack, Text, VStack } from '@chakra-ui/react';
 import { motion, useTransform, useViewportScroll } from 'framer-motion';
 import dynamic from 'next/dynamic';
 import Image from 'next/image'; // Import next/image for optimized image loading
@@ -6,7 +6,7 @@ import Image from 'next/image'; // Import next/image for optimized image loading
 import { PrimaryButton } from './primaryButton';
 
 const InstagramEmbed = dynamic(() => import('./instagramEmbed'), {
-  ssr: false
+  ssr: false // Load InstagramEmbed component dynamically
 });
 
 function HeroSection() {
@@ -34,14 +34,11 @@ function HeroSection() {
       >
         <Image
           src="/images/mars.jpg"
-          alt="Space"
-          // Adjust image quality as needed
+          alt="Mars"
           quality={100}
           fill
-          sizes="100vw"
-          style={{
-            objectFit: 'cover'
-          }}
+          style={{ objectFit: 'cover' }}
+          loading="eager"
         />
       </motion.div>
       <Grid

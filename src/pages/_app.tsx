@@ -1,8 +1,8 @@
 import { ChakraProvider } from '@chakra-ui/react';
+import { fonts } from 'client/fonts';
 import { theme } from 'client/theme';
 import { trpc } from 'client/trpc';
 import type { AppProps } from 'next/app';
-import { fonts } from 'client/fonts';
 
 function App({ Component, pageProps }: AppProps) {
   return (

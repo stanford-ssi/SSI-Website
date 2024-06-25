@@ -1,7 +1,18 @@
 import { Box } from '@chakra-ui/react';
 import Script from 'next/script';
+import { useEffect } from 'react';
 
-export default function InstagramEmbed() {
+const InstagramEmbed = () => {
+  useEffect(() => {
+    return () => {
+      // Clean up: remove the script when component unmounts
+      const script = document.getElementById('instagram-embed-script');
+      if (script) {
+        document.body.removeChild(script);
+      }
+    };
+  }, []);
+
   return (
     <>
       <Box
@@ -11,7 +22,15 @@ export default function InstagramEmbed() {
         data-instgrm-version={14}
         display="none"
       />
-      <Script src="//www.instagram.com/embed.js" />
+      <Script
+        id="instagram-embed-script"
+        src="//www.instagram.com/embed.js"
+        strategy="afterInteractive"
+        async
+        defer
+      />
     </>
   );
-}
+};
+
+export default InstagramEmbed;

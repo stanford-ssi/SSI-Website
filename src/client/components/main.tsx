@@ -1,4 +1,5 @@
 import { Flex } from '@chakra-ui/react';
+
 import { BlogSection } from './blogSection';
 import { EventsSection } from './eventsSection';
 import HeroSection from './heroSection'; // Import as default export

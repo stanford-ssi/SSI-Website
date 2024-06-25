@@ -38,6 +38,7 @@ function HeroSection() {
           quality={100}
           fill
           style={{ objectFit: 'cover' }}
+          loading="eager"
         />
       </motion.div>
       <Grid

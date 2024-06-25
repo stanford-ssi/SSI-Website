@@ -2864,15 +2864,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/font@npm:^14.2.4":
-  version: 14.2.4
-  resolution: "@next/font@npm:14.2.4"
-  peerDependencies:
-    next: "*"
-  checksum: 10c0/a9a2ca0e7628d9ac6905f4b0a4dae66c9e4964b678da758b8819f4a900f15802ce1239f7750f44cabf10c296d375947f7be68e6172e2bb52368972c807d89c73
-  languageName: node
-  linkType: hard
-
 "@next/swc-darwin-arm64@npm:14.2.4":
   version: 14.2.4
   resolution: "@next/swc-darwin-arm64@npm:14.2.4"
@@ -7217,7 +7208,6 @@ __metadata:
     "@chakra-ui/react": "npm:2.8.2"
     "@emotion/react": "npm:^11.11.4"
     "@emotion/styled": "npm:^11.11.5"
-    "@next/font": "npm:^14.2.4"
     "@tanstack/react-query": "npm:4.36.1"
     "@trpc/client": "npm:^10.45.2"
     "@trpc/next": "npm:^10.45.2"

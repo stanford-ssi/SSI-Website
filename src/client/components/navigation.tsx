@@ -10,13 +10,11 @@ import {
   MenuItem,
   MenuList
 } from '@chakra-ui/react';
-import { transparentize } from '@chakra-ui/theme-tools';
 import { useTheme } from '@emotion/react';
-import Image from 'next/image';
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
 import React, { ReactElement, useEffect, useState } from 'react';
-
+import Image from 'next/image';
 import { PrimaryButton } from './primaryButton';
 
 type NavLinkWrapperProps = React.PropsWithChildren<{
@@ -126,7 +124,6 @@ export default function Navigation(): ReactElement {
       top={0}
       width="full"
       zIndex={999}
-      background={transparentize('black', 0.1)(theme)}
       backdropFilter="auto"
       backdropBlur="5px"
       as="nav"

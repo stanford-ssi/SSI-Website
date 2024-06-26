@@ -1,7 +1,8 @@
 import { Box, Grid, Heading, HStack, Text, VStack } from '@chakra-ui/react';
-import { motion, useTransform, useScroll } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
+
 import { PrimaryButton } from './primaryButton';
 
 const InstagramEmbed = dynamic(() => import('./instagramEmbed'), {

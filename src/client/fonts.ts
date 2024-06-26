@@ -2,7 +2,7 @@ import { Archivo, Workbench } from 'next/font/google';
 
 export const archivo = Archivo({
   subsets: ['latin'],
-  variable: '--font-open-sans'
+  variable: '--font-archivo'
 });
 
 export const workbench = Workbench({

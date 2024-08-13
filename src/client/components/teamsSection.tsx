@@ -37,7 +37,7 @@ const teams: Readonly<Team[]> = [
     name: 'Rockets',
     icon: <RocketsIcon />,
     description:
-      'Pushing the limits of high power rocketry since 2013, the Rockets team is keeping pace with trending engineering challenges by building aerodynamic vehicles that propel innovative payloads into the air! With their obsessive dedication to things that go up really fast, the team is always striving to put its hard-earned hands-on skills to the test in explosive environments.'
+      'Pushing the limits of high power rocketry since 2013, the Rockets team is always striving to put its hard-earned hands-on skills to the test in explosive environments to propel innovative payloads into the air and beyond!'
   },
   {
     name: 'Satellites',
@@ -67,7 +67,7 @@ const teams: Readonly<Team[]> = [
     name: 'Mars',
     icon: <MarsIcon />,
     description:
-      "The SSI Mars team is revolutionizing space missions! Our Polar Rover will autonomously trek 100km across Antarctica, mimicking Mars. The Mars Bricks subteam tests building with Martian materials, even experimenting in space! Teaming with Astrolab, our Mars Excavator digs into lunar soil. All projects aren't just Mars-bound; they're green solutions to help save Earth too!"
+      "The Mars team has it’s sights set on long-term habitation, from the Mars Polar Rover to be tested in Antarctica to the Mars Bricks team testing regolith building materials. But we aren’t just building projects for the red planet, they're green solutions to help save Earth too!"
   }
 ];
 

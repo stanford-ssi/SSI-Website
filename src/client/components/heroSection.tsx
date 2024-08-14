@@ -1,22 +1,43 @@
-import { Box, Grid, Heading, HStack, Text, VStack } from '@chakra-ui/react';
+import {
+  Box,
+  Center,
+  Grid,
+  Heading,
+  HStack,
+  Spinner,
+  Text,
+  VStack
+} from '@chakra-ui/react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
 
 import { PrimaryButton } from './primaryButton';
 
+// Dynamically import InstagramEmbed
 const InstagramEmbed = dynamic(() => import('./instagramEmbed'), {
-  ssr: false // Load InstagramEmbed component dynamically
+  ssr: false // Client-side rendering only
 });
 
 function HeroSection() {
   const { scrollYProgress } = useScroll();
+  const { asPath } = useRouter();
 
-  // Define the range for scrollYProgress (typically 0 to 1)
+  const [isContentLoaded, setIsContentLoaded] = useState(false);
+
+  useEffect(() => {
+    // Reset loading state when path changes
+    setIsContentLoaded(false);
+  }, [asPath]);
+
   const yRange = [0, 1];
-
-  // Create a function to map scrollYProgress to a y transform range
   const y = useTransform(scrollYProgress, yRange, [-900, 100]);
+
+  const handleContentLoad = () => {
+    setIsContentLoaded(true);
+  };
 
   return (
     <>
@@ -29,7 +50,7 @@ function HeroSection() {
           height: '100vh',
           opacity: 0.15,
           zIndex: -1,
-          y: y // Apply y transform here
+          y: y
         }}
       >
         <Image
@@ -95,10 +116,13 @@ function HeroSection() {
             </PrimaryButton>
           </HStack>
         </VStack>
-        <Box>
-          {' '}
-          {/* Added the missing Box component here */}
-          <InstagramEmbed />
+        <Box minWidth="300px" maxWidth="540px">
+          {!isContentLoaded && (
+            <Center height="300px">
+              <Spinner size="xl" color="primary.500" />
+            </Center>
+          )}
+          <InstagramEmbed onLoad={handleContentLoad} />
         </Box>
       </Grid>
     </>

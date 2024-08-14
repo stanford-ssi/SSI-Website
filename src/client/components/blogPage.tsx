@@ -36,8 +36,8 @@ const Modal = dynamic(
 );
 
 export interface BlogPageProps {
-  recordMap?: ExtendedRecordMap;
-  pageId?: string;
+  readonly recordMap?: ExtendedRecordMap;
+  readonly pageId?: string;
 }
 
 export function BlogPage({ recordMap, pageId }: BlogPageProps) {

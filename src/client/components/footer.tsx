@@ -3,7 +3,6 @@ import { Box, Button, HStack, Text } from '@chakra-ui/react';
 
 import { InstagramIcon } from './icons/instagramIcon';
 import { LinkedInIcon } from './icons/linkedInIcon';
-import { TwitterIcon } from './icons/twitterIcon';
 import { YoutubeIcon } from './icons/youtubeIcon';
 
 type SocialButtonProps = React.PropsWithChildren<{
@@ -47,16 +46,13 @@ export default function Footer() {
       <HStack align="center" justify="space-between" spacing={4}>
         <HStack spacing={4} width="full">
           <Text color="gray.400" fontSize={{ base: '2xs', sm: 'xs', md: 'sm' }}>
-            Copyright © 2023 Stanford Student Space Initiative.{' '}
+            Copyright © 2024 Stanford Student Space Initiative.{' '}
             <Text as="span" display={{ base: 'none', sm: 'inline' }}>
               All rights reserved.
             </Text>
           </Text>
         </HStack>
         <HStack as="nav" width="full" spacing={{ base: 2, md: 4 }} flex={1}>
-          <SocialButton href="https://twitter.com/stanfordssi">
-            <TwitterIcon />
-          </SocialButton>
           <SocialButton href="https://www.instagram.com/stanfordssi/">
             <InstagramIcon />
           </SocialButton>

@@ -95,6 +95,9 @@ function HeroSection() {
             </PrimaryButton>
           </HStack>
         </VStack>
+        <Box>
+          {' '}
+          {/* Added the missing Box component here */}
           <InstagramEmbed />
         </Box>
       </Grid>

@@ -134,16 +134,16 @@ export const leaders: LeaderInfo[] = [
     twitter: '',
     youtube: ''
   },
-  // {
-  //   name: 'Lawton Skaling',
-  //   position: 'Operations Lead',
-  //   img: '/images/lawton.jpg',
-  //   email: 'lskaling@stanford.edu',
-  //   linkedIn: 'http://linkedin.com/in/lskaling',
-  //   instagram: 'https://www.instagram.com/lawton.9o7/',
-  //   twitter: 'https://twitter.com/LawtonSkaling',
-  //   youtube: 'https://www.youtube.com/@lskaling'
-  // },
+  {
+    name: 'Ria Bahadur',
+    position: 'Operations Lead',
+    img: '/images/ria.jpg',
+    email: 'riab@stanford.edu',
+    linkedIn: '',
+    instagram: '',
+    twitter: '',
+    youtube: ''
+  },
   {
     name: 'Natalia Kokoromyti',
     position: 'Policy Co-Lead',

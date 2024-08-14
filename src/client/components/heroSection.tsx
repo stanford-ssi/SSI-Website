@@ -95,7 +95,6 @@ function HeroSection() {
             </PrimaryButton>
           </HStack>
         </VStack>
-        <Box mt={{ base: 8, md: 0 }} borderRadius="xl" overflow="hidden">
           <InstagramEmbed />
         </Box>
       </Grid>

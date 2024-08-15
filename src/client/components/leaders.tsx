@@ -45,6 +45,16 @@ export const leaders: LeaderInfo[] = [
     youtube: ''
   },
   {
+    name: 'Luis Arizmendi',
+    position: 'Financial Officer',
+    img: '/images/luis.jpg',
+    email: 'larizmen@stanford.edu',
+    linkedIn: '',
+    instagram: '',
+    twitter: '',
+    youtube: ''
+  },
+  {
     name: 'Amber Leung',
     position: 'Balloons Co-Lead',
     img: '/images/amber.jpg',

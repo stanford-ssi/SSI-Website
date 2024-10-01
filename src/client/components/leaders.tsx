@@ -155,20 +155,20 @@ export const leaders: LeaderInfo[] = [
     youtube: ''
   },
   {
-    name: 'Natalia Kokoromyti',
+    name: 'Andrew Lesh',
     position: 'Policy Co-Lead',
-    img: '/images/natalia.jpg',
-    email: 'knatalia@stanford.edu',
+    img: '/images/andrew.jpg',
+    email: 'aclesh@stanford.edu',
     linkedIn: '',
     instagram: '',
     twitter: '',
     youtube: ''
   },
   {
-    name: 'Christian Figueroa',
+    name: 'Matthew Nguyen',
     position: 'Policy Co-Lead',
-    img: '/images/christian.jpg',
-    email: 'cfig@stanford.edu',
+    img: '/images/matthew.jpg',
+    email: 'mbfly@stanford.edu',
     linkedIn: '',
     instagram: '',
     twitter: '',

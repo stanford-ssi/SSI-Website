@@ -46,7 +46,7 @@ export default function Footer() {
       <HStack align="center" justify="space-between" spacing={4}>
         <HStack spacing={4} width="full">
           <Text color="gray.400" fontSize={{ base: '2xs', sm: 'xs', md: 'sm' }}>
-            Copyright © 2024 Stanford Student Space Initiative.{' '}
+            Copyright © 2025 Stanford Student Space Initiative.{' '}
             <Text as="span" display={{ base: 'none', sm: 'inline' }}>
               All rights reserved.
             </Text>

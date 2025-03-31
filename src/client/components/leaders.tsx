@@ -15,58 +15,8 @@ import { LeaderInfo } from 'client/components/leadershipTile';
 
 export const leaders: LeaderInfo[] = [
   {
-    name: 'Michelle Park',
-    position: 'Co-President',
-    img: '/images/michellep.jpg',
-    email: 'michpark@stanford.edu',
-    linkedIn: 'https://www.linkedin.com/in/michellepark314/',
-    instagram: '',
-    twitter: '',
-    youtube: ''
-  },
-  {
-    name: 'Ashley Raigosa',
-    position: 'Co-President',
-    img: '/images/ashley.jpg',
-    email: 'raigosa@stanford.edu',
-    linkedIn: 'https://www.linkedin.com/in/ashleyraigosa/',
-    instagram: '',
-    twitter: '',
-    youtube: ''
-  },
-  {
-    name: 'Aditri Vikrant Patil',
-    position: 'Financial Officer',
-    img: '/images/aditri.jpg',
-    email: 'apatil26@stanford.edu',
-    linkedIn: '',
-    instagram: '',
-    twitter: '',
-    youtube: ''
-  },
-  {
-    name: 'Luis Arizmendi',
-    position: 'Financial Officer',
-    img: '/images/luis.jpg',
-    email: 'larizmen@stanford.edu',
-    linkedIn: '',
-    instagram: '',
-    twitter: '',
-    youtube: ''
-  },
-  {
-    name: 'Amber Leung',
-    position: 'Balloons Co-Lead',
-    img: '/images/amber.jpg',
-    email: 'amleung@stanford.edu',
-    linkedIn: '',
-    instagram: '',
-    twitter: '',
-    youtube: ''
-  },
-  {
     name: 'Michelle Zheng',
-    position: 'Balloons Co-Lead',
+    position: 'Co-President',
     img: '/images/michellez.jpg',
     email: 'miczheng@stanford.edu',
     linkedIn: '',
@@ -75,70 +25,120 @@ export const leaders: LeaderInfo[] = [
     youtube: ''
   },
   {
-    name: 'Abelle Jayadinata',
-    position: 'Rockets Co-Lead',
-    img: '/images/abelle.jpg',
-    email: 'abellej@stanford.edu',
-    linkedIn: '',
-    instagram: '',
-    twitter: '',
-    youtube: ''
-  },
-  {
-    name: 'Francisco Ortiz',
-    position: 'Rockets Co-Lead',
-    img: '/images/francisco.jpg',
-    email: 'frortiz@stanford.edu',
-    linkedIn: '',
-    instagram: '',
-    twitter: '',
-    youtube: ''
-  },
-  {
     name: 'Sage Wu',
-    position: 'Satellites Co-Lead',
-    img: '/images/sage.jpg',
+    position: 'Co-President',
+    img: '/images/sagew.jpg',
     email: 'sagewu@stanford.edu',
-    linkedIn: 'https://www.linkedin.com/in/sage-wu/',
-    instagram: '',
-    twitter: '',
-    youtube: ''
-  },
-  {
-    name: 'Niklas Vainio',
-    position: 'Satellites Co-Lead',
-    img: '/images/niklas.jpg',
-    email: 'uremail@stanford.edu',
-    linkedIn: 'https://www.linkedin.com/in/niklas-vainio-a4666a225/',
-    instagram: 'https://www.instagram.com/niklas.vainio/',
-    twitter: '',
-    youtube: ''
-  },
-  {
-    name: 'Hunter Liu',
-    position: 'Satellites Co-Lead',
-    img: '/images/hunter.jpg',
-    email: 'hliu24@stanford.edu',
     linkedIn: '',
     instagram: '',
     twitter: '',
     youtube: ''
   },
   {
-    name: 'Ginger Buck',
-    position: 'Biology Co-Lead',
-    img: '/images/ginger.jpg',
-    email: 'ginger24@stanford.edu',
-    linkedIn: 'www.linkedin.com/in/ginger-buck',
+    name: 'Natalia Banciella',
+    position: 'Financial Officer',
+    img: '/images/nataliab.jpg',
+    email: 'nataban@stanford.edu',
+    linkedIn: '',
     instagram: '',
     twitter: '',
     youtube: ''
   },
   {
-    name: 'Jake Rintamaki',
+    name: 'Joshua Kendall',
+    position: 'Financial Officer',
+    img: '/images/joshuak.jpg',
+    email: 'kendall8@stanford.edu',
+    linkedIn: '',
+    instagram: '',
+    twitter: '',
+    youtube: ''
+  },
+  {
+    name: 'Quyen Vo',
+    position: 'Balloons Co-Lead',
+    img: '/images/quyenv.jpg',
+    email: 'quyenvo@stanford.edu',
+    linkedIn: '',
+    instagram: '',
+    twitter: '',
+    youtube: ''
+  },
+  {
+    name: 'David Zhou',
+    position: 'Balloons Co-Lead',
+    img: '/images/davidz.jpg',
+    email: 'davidzh@stanford.edu',
+    linkedIn: '',
+    instagram: '',
+    twitter: '',
+    youtube: ''
+  },
+  {
+    name: 'Jackie Peña',
+    position: 'Rockets Co-Lead',
+    img: '/images/jackiep.jpg',
+    email: 'jjackie@stanford.edu',
+    linkedIn: '',
+    instagram: '',
+    twitter: '',
+    youtube: ''
+  },
+  {
+    name: 'Diego Ortiz',
+    position: 'Rockets Co-Lead',
+    img: '/images/diegoo.jpg',
+    email: 'ddortiz@stanford.edu',
+    linkedIn: '',
+    instagram: '',
+    twitter: '',
+    youtube: ''
+  },
+  {
+    name: 'Mason Matich',
+    position: 'Satellites Co-Lead',
+    img: '/images/masonm.jpg',
+    email: 'mcmatich@stanford.edu',
+    linkedIn: '',
+    instagram: '',
+    twitter: '',
+    youtube: ''
+  },
+  {
+    name: 'Kaitlyn Leitherer',
+    position: 'Satellites Co-Lead',
+    img: '/images/kaitlynl.jpg',
+    email: 'kaitlyn5@stanford.edu',
+    linkedIn: '',
+    instagram: '',
+    twitter: '',
+    youtube: ''
+  },
+  {
+    name: 'Lundeen Cahilly',
+    position: 'Satellites Co-Lead',
+    img: '/images/lundeenc.jpg',
+    email: 'lcahilly@stanford.edu',
+    linkedIn: '',
+    instagram: '',
+    twitter: '',
+    youtube: ''
+  },
+  {
+    name: 'Deniz Yilmaz',
     position: 'Biology Co-Lead',
-    img: '/images/jake.jpg',
-    email: 'jrin@stanford.edu',
+    img: '/images/denizy.jpg',
+    email: 'dyilmaz@stanford.edu',
+    linkedIn: '',
+    instagram: '',
+    twitter: '',
+    youtube: ''
+  },
+  {
+    name: 'Annabelle Shilling',
+    position: 'Biology Co-Lead',
+    img: '/images/annabelles.jpg',
+    email: 'agshilli@stanford.edu',
     linkedIn: '',
     instagram: '',
     twitter: '',
@@ -147,7 +147,7 @@ export const leaders: LeaderInfo[] = [
   {
     name: 'Ria Bahadur',
     position: 'Operations Lead',
-    img: '/images/ria.jpg',
+    img: '/images/riab.jpg',
     email: 'riab@stanford.edu',
     linkedIn: '',
     instagram: '',
@@ -155,50 +155,40 @@ export const leaders: LeaderInfo[] = [
     youtube: ''
   },
   {
-    name: 'Andrew Lesh',
+    name: 'Jhonny Almeida',
     position: 'Policy Co-Lead',
-    img: '/images/andrew.jpg',
-    email: 'aclesh@stanford.edu',
+    img: '/images/jhonnya.jpg',
+    email: 'jalmeida@stanford.edu',
     linkedIn: '',
     instagram: '',
     twitter: '',
     youtube: ''
   },
   {
-    name: 'Matthew Nguyen',
+    name: 'Nishi Kelkar',
     position: 'Policy Co-Lead',
-    img: '/images/matthew.jpg',
-    email: 'mbfly@stanford.edu',
+    img: '/images/nishik.jpg',
+    email: 'nishikel@stanford.edu',
     linkedIn: '',
     instagram: '',
     twitter: '',
     youtube: ''
   },
   {
-    name: 'Houjun Liu',
+    name: 'Colin Crown',
     position: 'Co-Lead, Mars',
-    img: '/images/houjun.jpg',
-    email: 'houjun@stanford.edu',
-    linkedIn: 'https://www.linkedin.com/in/houjun-liu',
-    instagram: '',
-    twitter: '',
-    youtube: ''
-  },
-  {
-    name: 'Sydney Leigh Bohles',
-    position: 'Mars Co-Lead',
-    img: '/images/sydney.jpg',
-    email: 'sbohles@stanford.edu',
+    img: '/images/colinc.jpg',
+    email: 'ccrown@stanford.edu',
     linkedIn: '',
     instagram: '',
     twitter: '',
     youtube: ''
   },
   {
-    name: 'Euclid Soringa',
+    name: 'Arden Boshler Wiese',
     position: 'Mars Co-Lead',
-    img: '/images/euclid.jpg',
-    email: 'euc@stanford.edu',
+    img: '/images/ardenw.jpg',
+    email: 'arden01@stanford.edu',
     linkedIn: '',
     instagram: '',
     twitter: '',
@@ -207,8 +197,18 @@ export const leaders: LeaderInfo[] = [
   {
     name: 'Matthew Nguyen',
     position: 'Workspace Manager',
-    img: '/images/matthew.jpg',
+    img: '/images/matthewn.jpg',
     email: 'mbfly@stanford.edu',
+    linkedIn: '',
+    instagram: '',
+    twitter: '',
+    youtube: ''
+  },
+  {
+    name: 'Amy Hoang',
+    position: 'Workspace Manager',
+    img: '/images/amyh.jpg',
+    email: 'amyh26@stanford.edu',
     linkedIn: '',
     instagram: '',
     twitter: '',
@@ -217,8 +217,18 @@ export const leaders: LeaderInfo[] = [
   {
     name: 'Leo Glikbarg',
     position: 'Safety Lead',
-    img: '/images/leo.jpg',
+    img: '/images/leog.jpg',
     email: 'lglik@stanford.edu',
+    linkedIn: '',
+    instagram: '',
+    twitter: '',
+    youtube: ''
+  },
+  {
+    name: 'Mason Matich',
+    position: 'IT Lead & Webmaster',
+    img: '/images/masonm.jpg',
+    email: 'mcmatich@stanford.edu',
     linkedIn: '',
     instagram: '',
     twitter: '',

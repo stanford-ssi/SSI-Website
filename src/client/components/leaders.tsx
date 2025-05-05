@@ -145,20 +145,10 @@ export const leaders: LeaderInfo[] = [
     youtube: ''
   },
   {
-    name: 'Michelle Zheng',
-    position: 'Operations Co-Lead',
-    img: '/images/michellez.jpg',
-    email: 'miczheng@stanford.edu',
-    linkedIn: '',
-    instagram: '',
-    twitter: '',
-    youtube: ''
-  },
-  {
-    name: 'Sage Wu',
-    position: 'Operations Co-Lead',
-    img: '/images/sagew.jpg',
-    email: 'sagewu@stanford.edu',
+    name: 'Kenna De La Rosa',
+    position: 'Operations Lead',
+    img: '/images/kennar.jpg',
+    email: 'krdlr11@stanford.edu',
     linkedIn: '',
     instagram: '',
     twitter: '',

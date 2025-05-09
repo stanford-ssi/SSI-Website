@@ -215,10 +215,10 @@ export const leaders: LeaderInfo[] = [
     youtube: ''
   },
   {
-    name: 'Leo Glikbarg',
+    name: 'Ashwin Ananthakumaran',
     position: 'Safety Lead',
-    img: '/images/leog.jpg',
-    email: 'lglik@stanford.edu',
+    img: '/images/ashwina.jpg',
+    email: 'ashwin5@stanford.edu',
     linkedIn: '',
     instagram: '',
     twitter: '',

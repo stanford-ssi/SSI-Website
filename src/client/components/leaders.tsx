@@ -165,16 +165,6 @@ export const leaders: LeaderInfo[] = [
     youtube: ''
   },
   {
-    name: 'Nishi Kelkar',
-    position: 'Policy Co-Lead',
-    img: '/images/nishik.jpg',
-    email: 'nishikel@stanford.edu',
-    linkedIn: '',
-    instagram: '',
-    twitter: '',
-    youtube: ''
-  },
-  {
     name: 'Colin Crown',
     position: 'Co-Lead, Mars',
     img: '/images/colinc.jpg',

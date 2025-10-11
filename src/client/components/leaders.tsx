@@ -105,16 +105,6 @@ export const leaders: LeaderInfo[] = [
     youtube: ''
   },
   {
-    name: 'Kaitlyn Leitherer',
-    position: 'Satellites Co-Lead',
-    img: '/images/kaitlynl.jpg',
-    email: 'kaitlyn5@stanford.edu',
-    linkedIn: '',
-    instagram: '',
-    twitter: '',
-    youtube: ''
-  },
-  {
     name: 'Lundeen Cahilly',
     position: 'Satellites Co-Lead',
     img: '/images/lundeenc.jpg',
@@ -155,20 +145,20 @@ export const leaders: LeaderInfo[] = [
     youtube: ''
   },
   {
-    name: 'Jhonny Almeida',
-    position: 'Policy Co-Lead',
-    img: '/images/jhonnya.jpg',
-    email: 'jalmeida@stanford.edu',
+    name: 'David Hu',
+    position: 'Operations Lead',
+    img: '/images/davidh.jpg',
+    email: 'dwhu@stanford.edu',
     linkedIn: '',
     instagram: '',
     twitter: '',
     youtube: ''
   },
   {
-    name: 'Nishi Kelkar',
+    name: 'Jhonny Almeida',
     position: 'Policy Co-Lead',
-    img: '/images/nishik.jpg',
-    email: 'nishikel@stanford.edu',
+    img: '/images/jhonnya.jpg',
+    email: 'jalmeida@stanford.edu',
     linkedIn: '',
     instagram: '',
     twitter: '',

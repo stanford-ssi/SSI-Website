@@ -1,4 +1,6 @@
 import { ChakraProvider } from '@chakra-ui/react';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { fonts } from 'client/fonts'; // Ensure this path is correct
 import { theme } from 'client/theme';
 import { trpc } from 'client/trpc';
@@ -16,6 +18,8 @@ function App({ Component, pageProps }: AppProps) {
       <ChakraProvider resetCSS theme={theme}>
         <Component {...pageProps} />
       </ChakraProvider>
+      <Analytics />
+      <SpeedInsights />
     </>
   );
 }

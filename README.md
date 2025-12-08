@@ -6,14 +6,14 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 First, install [VSCode](https://code.visualstudio.com/download) and the [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) and [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) extensions.
 
-Then, install [Yarn](https://classic.yarnpkg.com/en/docs/install) and [Node.js](https://nodejs.org/en/download/).
+Then, install [pnpm](https://pnpm.io/installation) and [Node.js](https://nodejs.org/en/download/).
 
 Clone this repository and open it in VSCode.
 
 Then install the dependencies:
 
 ```bash
-yarn install
+pnpm install
 ```
 
 Then, create a `.env.local` file in the root directory and add all of the environment variables listed in `.env.example`. You can get the values for these variables from the SSI team.
@@ -23,7 +23,7 @@ Then, create a `.env.local` file in the root directory and add all of the enviro
 First, run the development server:
 
 ```bash
-yarn dev
+pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.

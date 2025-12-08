@@ -7,9 +7,13 @@ import Layout from 'client/components/layout';
 import dynamic from 'next/dynamic';
 import { Block, ExtendedRecordMap } from 'notion-types';
 import { getPageTitle } from 'notion-utils';
-import { NotionRenderer } from 'react-notion-x';
 
 export const ROOT_NOTION_PAGE_ID = 'SSI-Blog-722cf1326728402298c0f83b004faf9e';
+
+const NotionRenderer = dynamic(
+  () => import('react-notion-x').then((m) => m.NotionRenderer),
+  { ssr: false }
+);
 
 const Code = dynamic(() =>
   import('react-notion-x/build/third-party/code').then((m) => m.Code)

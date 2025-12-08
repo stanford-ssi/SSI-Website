@@ -138,7 +138,7 @@ export function BlogPage({ recordMap, pageId }: BlogPageProps) {
   }
 
   return (
-    <Layout title={title} description="Stanford SSI blog post">
+    <Layout title={title || 'Blog Post'} description="Stanford SSI blog post">
       {renderCoverImg()}
       <Heading textAlign="center" marginTop={10}>
         {title}

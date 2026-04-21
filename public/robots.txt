@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://ssi.stanford.edu
+
+# Sitemaps
+Sitemap: https://ssi.stanford.edu/sitemap.xml

@@ -52,9 +52,12 @@ export function BlogPage({ recordMap, pageId }: BlogPageProps) {
 
   const title = getPageTitle(recordMap);
 
-  const pageBlock: Block | undefined = pageId
-    ? recordMap.block[pageId].value
-    : undefined;
+  const rawBlockData = pageId ? recordMap.block[pageId] : undefined;
+
+  const pageBlock: Block | undefined =
+    rawBlockData && 'value' in rawBlockData
+      ? (rawBlockData.value as Block)
+      : (rawBlockData as Block | undefined);
 
   function formatTimestamp(unixTimestamp: number): string {
     const date = new Date(unixTimestamp);

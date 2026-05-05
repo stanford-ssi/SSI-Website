@@ -64,10 +64,10 @@ const teams: Readonly<Team[]> = [
       "The Policy team researches the legislation, market trends, history, and philosophy that has affected the development of the space industry. They're presenting their research to the United Nations."
   },
   {
-    name: 'Mars',
+    name: 'X-Env',
     icon: <MarsIcon />,
     description:
-      "The Mars team has it’s sights set on long-term habitation, from the Mars Polar Rover to be tested in Antarctica to the Mars Bricks team testing regolith building materials. But we aren’t just building projects for the red planet, they're green solutions to help save Earth too!"
+      "The Extreme Environments team has it’s sights set on long-term habitation, from the Mars Polar Rover to be tested in Antarctica to the Mars Bricks team testing regolith building materials. But we aren’t just building projects for the red planet, they're green solutions to help save Earth too!"
   }
 ];
 

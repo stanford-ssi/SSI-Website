@@ -19,7 +19,7 @@ export function PeopleSection() {
               The Stanford Student Space Initiative (Stanford SSI) is
               Stanford&apos;s largest project-based student group, with more
               than 300 members split into six project teams: Rockets,
-              Satellites, Balloons, Mars, Biology, and Policy.
+              Satellites, Balloons, Extreme Environments, Biology, and Policy.
             </Text>
             <Text>
               We are a completely student-run organization founded in 2013 with

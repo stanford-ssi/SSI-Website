@@ -37,7 +37,7 @@ const teams: Readonly<Team[]> = [
     name: 'Rockets',
     icon: <RocketsIcon />,
     description:
-      'Pushing the limits of high power rocketry since 2013, the Rockets team is always striving to put its hard-earned hands-on skills to the test in explosive environments to propel innovative payloads into the air and beyond!'
+      'Pushing the limits of high power rocketry and experimental propulsion since 2013, the Rockets team is always striving to put its hard-earned hands-on skills to the test in explosive environments to propel innovative payloads into the air and beyond!'
   },
   {
     name: 'Satellites',

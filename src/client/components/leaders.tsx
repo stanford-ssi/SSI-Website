@@ -196,7 +196,7 @@ export const leaders: LeaderInfo[] = [
   },
   {
     name: 'Connor Green',
-    position: 'Extreme Environments Co-Lead',
+    position: 'X-Env Co-Lead',
     img: '/images/connorg.jpg',
     email: 'cgreen28@stanford.edu',
     linkedIn: '',
@@ -206,7 +206,7 @@ export const leaders: LeaderInfo[] = [
   },
   {
     name: 'Danny Gass',
-    position: 'Extreme Environments Co-Lead',
+    position: 'X-Env Co-Lead',
     img: '/images/dannyg.jpg',
     email: 'dgass@stanford.edu',
     linkedIn: '',

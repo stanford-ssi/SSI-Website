@@ -49,7 +49,7 @@ const teams: Readonly<Team[]> = [
     name: 'Biology',
     icon: <BioIcon />,
     description:
-      "The Biology team is building devices to sustain life in space, and to use life to accomplish missions in space. They're currently working on building a DNA synthesizer for microgravity, which will be the first device to synthesize DNA in space."
+      'The Biology team is building devices to sustain life in space and to use life to accomplish missions in space. Current initiatives include mycoRocket, which leverages biological systems for space propulsion and mission applications, and astropharmacy, where the team is developing working plasmids to enable biological manufacturing and pharmaceutical production in space environments. They are also looking forward to many more exciting projects!'
   },
   {
     name: 'Operations',
@@ -61,13 +61,13 @@ const teams: Readonly<Team[]> = [
     name: 'Policy',
     icon: <PolicyIcon />,
     description:
-      "The Policy team researches the legislation, market trends, history, and philosophy that has affected the development of the space industry. They're presenting their research to the United Nations."
+      'The Policy team researches the legislation, market trends, history, and philosophy that has affected the development of the space industry. Technical papers to be published in the Space Law Society Forum and a variety of other publication platforms.'
   },
   {
     name: 'X-Env',
     icon: <MarsIcon />,
     description:
-      "The Extreme Environments team has it’s sights set on long-term habitation, from the Mars Polar Rover to be tested in Antarctica to the Mars Bricks team testing regolith building materials. But we aren’t just building projects for the red planet, they're green solutions to help save Earth too!"
+      'The Extreme Environments team has its sights set on conquering extreme environments, from the Polar Rover to be tested in Antarctica, the Microgravity Crystal Payload soaring to 30,000 ft, or Europa exploring the depths of the ocean. Whether in the frozen poles, the upper atmosphere, or the crushing deep sea, every mission brings us one step closer to the stars!'
   }
 ];
 

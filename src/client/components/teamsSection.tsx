@@ -43,7 +43,7 @@ const teams: Readonly<Team[]> = [
     name: 'Satellites',
     icon: <SatelliteIcon />,
     description:
-      "The Satellites team has launched a variety of imaging, scientific, and optical communications CubeSats. They're currently working on a 2U imaging CubeSat called SAMWISE to demo a deployable solar array, a star-tracker, improved attitude control, and S-band communication."
+      "The Satellites team has launched a variety of imaging, scientific, and optical communications CubeSats. They're currently working on a 2U imaging CubeSat called SAMWISE launching on Transporter-18 in October 2026 to demo a deployable solar array, improved attitude control, and S-band communication."
   },
   {
     name: 'Biology',
@@ -64,10 +64,10 @@ const teams: Readonly<Team[]> = [
       'The Policy team researches the legislation, market trends, history, and philosophy that has affected the development of the space industry. Technical papers to be published in the Space Law Society Forum and a variety of other publication platforms.'
   },
   {
-    name: 'X-Env',
+    name: 'M.A.R.S',
     icon: <MarsIcon />,
     description:
-      'The Extreme Environments team has its sights set on conquering extreme environments, from the Polar Rover to be tested in Antarctica, the Microgravity Crystal Payload soaring to 30,000 ft, or Europa exploring the depths of the ocean. Whether in the frozen poles, the upper atmosphere, or the crushing deep sea, every mission brings us one step closer to the stars!'
+      'The Multi-Environment Applied Research and Systems (M.A.R.S) team has its sights set on conquering extreme environments, from the Polar Rover to be tested in Antarctica, the Microgravity Crystal Payload soaring to 30,000 ft, or Europa exploring the depths of the ocean. Whether in the frozen poles, the upper atmosphere, or the crushing deep sea, every mission brings us one step closer to the stars!'
   }
 ];
 

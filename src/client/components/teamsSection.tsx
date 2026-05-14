@@ -31,7 +31,7 @@ const teams: Readonly<Team[]> = [
     name: 'Balloons',
     icon: <BalloonsIcon />,
     description:
-      "The Balloons Team has launched and recovered more than 50 high altitude balloons carrying scientific payloads to over 100,000 feet. With innovative designs and cutting edge avionics, they've set the world record for latex balloon flight endurance and are aiming to circumnavigate the globe."
+      'The High-Altitude Balloons team has launched and recovered more than 100 payloads throughout its history. We designed, manufacture, and fly advanced integrated systems as our payloads. Building on a rich history that encompasses innovative projects like ValBal and endurance-setting flights that circumnavigate the globe, the Balloons team is pushing the technological frontier of what is achievable using simply balloons.'
   },
   {
     name: 'Rockets',

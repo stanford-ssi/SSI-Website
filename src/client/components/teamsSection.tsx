@@ -79,7 +79,13 @@ interface TeamCardProps {
   unsetActive: () => void;
 }
 
-function TeamCard({ name, icon, isActive, setActive }: TeamCardProps) {
+function TeamCard({
+  name,
+  icon,
+  isActive,
+  setActive,
+  unsetActive
+}: TeamCardProps) {
   const size = { base: '80px', sm: '104px' } as const;
 
   return (
@@ -91,6 +97,7 @@ function TeamCard({ name, icon, isActive, setActive }: TeamCardProps) {
         height={size}
         bgGradient={isActive ? primaryGradient : undefined}
         onMouseEnter={setActive}
+        onMouseLeave={unsetActive}
         fontSize={{ base: '5xl', sm: '7xl' }}
         align="center"
         justify="center"

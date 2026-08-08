@@ -22,8 +22,8 @@ export const getStaticProps: GetStaticProps<BlogPageProps> = async (
   return {
     props: {
       recordMap: page,
-      pageId,
-      revalidate: 10
-    }
+      pageId
+    },
+    revalidate: 10
   };
 };

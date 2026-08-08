@@ -45,7 +45,6 @@ export interface BlogPageProps {
 }
 
 export function BlogPage({ recordMap, pageId }: BlogPageProps) {
-  console.log(recordMap);
   if (!recordMap) {
     return null;
   }

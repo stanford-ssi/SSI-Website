@@ -15,8 +15,8 @@ export const getStaticProps: GetStaticProps<BlogPageProps> = async () => {
 
   return {
     props: {
-      recordMap: page,
-      revalidate: 10
-    }
+      recordMap: page
+    },
+    revalidate: 10
   };
 };

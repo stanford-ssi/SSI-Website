@@ -59,15 +59,35 @@ export function BlogPage({ recordMap, pageId }: BlogPageProps) {
 
   const title = getPageTitle(recordMap);
 
-  const rawBlockData = pageId ? recordMap.block[pageId] : undefined;
+  // recordMap.block entries can be wrapped as { role, value } and, in some
+  // notion-types versions, double-wrapped as { role, value: { role, value } }.
+  // Unwrap until we reach the actual block (or run out of wrapper layers).
+  function unwrapBlock(entry: unknown): Block | undefined {
+    let current = entry;
+    while (
+      current &&
+      typeof current === 'object' &&
+      'role' in current &&
+      'value' in current
+    ) {
+      current = (current as { value: unknown }).value;
+    }
+    return current as Block | undefined;
+  }
 
-  const pageBlock: Block | undefined =
-    rawBlockData && 'value' in rawBlockData
-      ? (rawBlockData.value as Block)
-      : (rawBlockData as Block | undefined);
+  const pageBlock = unwrapBlock(
+    pageId ? recordMap.block[pageId] : undefined
+  );
 
-  function formatTimestamp(unixTimestamp: number): string {
+  function formatTimestamp(unixTimestamp: number | undefined): string | null {
+    if (!unixTimestamp) {
+      return null;
+    }
+
     const date = new Date(unixTimestamp);
+    if (Number.isNaN(date.getTime())) {
+      return null;
+    }
 
     const monthNames = [
       'January',
@@ -97,11 +117,14 @@ export function BlogPage({ recordMap, pageId }: BlogPageProps) {
     }
     const createdOn = formatTimestamp(pageBlock.created_time);
     const updatedOn = formatTimestamp(pageBlock.last_edited_time);
+    if (!createdOn) {
+      return null;
+    }
     return (
       <Center>
         <Text marginBottom={8}>
           {createdOn}
-          {createdOn !== updatedOn && `. Updated ${updatedOn}.`}
+          {updatedOn && createdOn !== updatedOn && `. Updated ${updatedOn}.`}
         </Text>
       </Center>
     );

@@ -5,8 +5,9 @@ import 'katex/dist/katex.min.css';
 import { Box, Center, Heading, Image, Text } from '@chakra-ui/react';
 import Layout from 'client/components/layout';
 import dynamic from 'next/dynamic';
-import { Block, ExtendedRecordMap } from 'notion-types';
+import { ExtendedRecordMap } from 'notion-types';
 import { getPageTitle } from 'notion-utils';
+import { unwrapBlock } from 'server/notionBlock';
 
 export const ROOT_NOTION_PAGE_ID = 'SSI-Blog-722cf1326728402298c0f83b004faf9e';
 
@@ -58,23 +59,6 @@ export function BlogPage({ recordMap, pageId }: BlogPageProps) {
   }
 
   const title = getPageTitle(recordMap);
-
-  // recordMap.block entries are wrapped in one or more layers of { value }
-  // (with varying sibling keys like `role` or `spaceId` depending on the
-  // block). Keep descending into `.value` until we reach an object with a
-  // `type` field, which only the actual Block has.
-  function unwrapBlock(entry: unknown): Block | undefined {
-    let current = entry;
-    while (
-      current &&
-      typeof current === 'object' &&
-      !('type' in current) &&
-      'value' in current
-    ) {
-      current = (current as { value: unknown }).value;
-    }
-    return current as Block | undefined;
-  }
 
   const pageBlock = unwrapBlock(
     pageId ? recordMap.block[pageId] : undefined

@@ -11,12 +11,23 @@ export default function Page(props: BlogPageProps) {
 }
 
 export const getStaticProps: GetStaticProps<BlogPageProps> = async () => {
-  const page = await notion.getPage(ROOT_NOTION_PAGE_ID);
+  try {
+    const page = await notion.getPage(ROOT_NOTION_PAGE_ID);
 
-  return {
-    props: {
-      recordMap: page
-    },
-    revalidate: 10
-  };
+    return {
+      props: {
+        recordMap: page
+      },
+      revalidate: 10
+    };
+  } catch (error) {
+    // Notion's unofficial API occasionally blocks server/build traffic;
+    // don't let a transient failure here fail the whole site's deploy.
+    console.error('Failed to fetch Notion blog page', error);
+
+    return {
+      props: {},
+      revalidate: 10
+    };
+  }
 };

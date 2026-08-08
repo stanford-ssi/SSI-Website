@@ -46,7 +46,15 @@ export interface BlogPageProps {
 
 export function BlogPage({ recordMap, pageId }: BlogPageProps) {
   if (!recordMap) {
-    return null;
+    return (
+      <Layout title="Blog" description="Stanford SSI blog">
+        <Center flex={1}>
+          <Text>
+            The blog is temporarily unavailable. Please check back soon.
+          </Text>
+        </Center>
+      </Layout>
+    );
   }
 
   const title = getPageTitle(recordMap);

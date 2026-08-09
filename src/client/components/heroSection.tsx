@@ -12,7 +12,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 import { PrimaryButton } from './primaryButton';
 
@@ -35,9 +35,9 @@ function HeroSection() {
   const yRange = [0, 1];
   const y = useTransform(scrollYProgress, yRange, [-900, 100]);
 
-  const handleContentLoad = () => {
+  const handleContentLoad = useCallback(() => {
     setIsContentLoaded(true);
-  };
+  }, []);
 
   return (
     <>

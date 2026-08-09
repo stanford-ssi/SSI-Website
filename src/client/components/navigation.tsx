@@ -10,11 +10,11 @@ import {
   MenuItem,
   MenuList
 } from '@chakra-ui/react';
-import { useTheme } from '@emotion/react';
+import Image from 'next/image';
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
-import React, { ReactElement, useEffect, useState } from 'react';
-import Image from 'next/image';
+import React, { ReactElement } from 'react';
+
 import { PrimaryButton } from './primaryButton';
 
 type NavLinkWrapperProps = React.PropsWithChildren<{
@@ -102,20 +102,6 @@ function NavLink({ href, children, newTab }: NavLinkProps): ReactElement {
 }
 
 export default function Navigation(): ReactElement {
-  const theme = useTheme();
-
-  const [width, setWidth] = useState<number>(0);
-
-  useEffect(() => {
-    setWidth(window.innerWidth);
-    window.addEventListener('resize', () => setWidth(window.innerWidth));
-    return () => {
-      window.removeEventListener('resize', () => setWidth(window.innerWidth));
-    };
-  }, []);
-
-  const isMobile = width <= 768;
-
   return (
     <Box
       px={{ base: 6, md: 32 }}
@@ -161,12 +147,13 @@ export default function Navigation(): ReactElement {
           spacing={{ base: 0, sm: 2, md: 4 }}
           flex={1}
         >
-          {!isMobile &&
-            routes.map(({ title, link, newTab }) => (
+          <HStack display={{ base: 'none', md: 'flex' }} spacing={4}>
+            {routes.map(({ title, link, newTab }) => (
               <NavLink key={title} href={link} newTab={newTab}>
                 {title}
               </NavLink>
             ))}
+          </HStack>
           <PrimaryButton
             as="a"
             href="https://wiki.stanfordssi.org/How_to_Join_SSI"
@@ -175,23 +162,22 @@ export default function Navigation(): ReactElement {
           >
             Join
           </PrimaryButton>
-          {isMobile && (
-            <Menu>
-              <MenuButton
-                as={IconButton}
-                aria-label="Options"
-                icon={<HamburgerIcon />}
-                variant="outline"
-              />
-              <MenuList>
-                {routes.map(({ title, link, newTab }) => (
-                  <MenuItem as="a" key={title} href={link}>
-                    {title}
-                  </MenuItem>
-                ))}
-              </MenuList>
-            </Menu>
-          )}
+          <Menu>
+            <MenuButton
+              as={IconButton}
+              display={{ base: 'inline-flex', md: 'none' }}
+              aria-label="Options"
+              icon={<HamburgerIcon />}
+              variant="outline"
+            />
+            <MenuList>
+              {routes.map(({ title, link, newTab }) => (
+                <MenuItem as="a" key={title} href={link}>
+                  {title}
+                </MenuItem>
+              ))}
+            </MenuList>
+          </Menu>
         </HStack>
       </HStack>
     </Box>

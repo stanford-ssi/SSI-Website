@@ -1,4 +1,5 @@
-import { Card, Heading, Image, Stack, Text } from '@chakra-ui/react';
+import { Box, Card, Heading, Stack, Text } from '@chakra-ui/react';
+import Image from 'next/image';
 
 import { SECTION_MAX_WIDTH } from './constants';
 
@@ -51,7 +52,15 @@ export function PeopleSection() {
             <Text fontWeight="bold">We invite you to join us.</Text>
           </Stack>
         </Card>
-        <Image width="full" alt="SSI Team" src="/images/team.jpg" />
+        <Box position="relative" width="100%" style={{ aspectRatio: 5952 / 3358 }}>
+          <Image
+            src="/images/team.jpg"
+            alt="SSI Team"
+            fill
+            sizes="(min-width: 1280px) 1280px, 100vw"
+            style={{ objectFit: 'cover' }}
+          />
+        </Box>
       </Stack>
     </Stack>
   );

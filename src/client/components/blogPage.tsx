@@ -1,12 +1,15 @@
 import 'react-notion-x/src/styles.css';
 import 'prismjs/themes/prism-tomorrow.css';
 import 'katex/dist/katex.min.css';
+import 'react-pdf/dist/Page/AnnotationLayer.css';
+import 'react-pdf/dist/Page/TextLayer.css';
 
 import { Box, Center, Heading, Image, Text } from '@chakra-ui/react';
 import Layout from 'client/components/layout';
 import dynamic from 'next/dynamic';
-import { Block, ExtendedRecordMap } from 'notion-types';
+import { ExtendedRecordMap } from 'notion-types';
 import { getPageTitle } from 'notion-utils';
+import { unwrapBlock } from 'server/notionBlock';
 
 export const ROOT_NOTION_PAGE_ID = 'SSI-Blog-722cf1326728402298c0f83b004faf9e';
 
@@ -45,22 +48,33 @@ export interface BlogPageProps {
 }
 
 export function BlogPage({ recordMap, pageId }: BlogPageProps) {
-  console.log(recordMap);
   if (!recordMap) {
-    return null;
+    return (
+      <Layout title="Blog" description="Stanford SSI blog">
+        <Center flex={1}>
+          <Text>
+            The blog is temporarily unavailable. Please check back soon.
+          </Text>
+        </Center>
+      </Layout>
+    );
   }
 
   const title = getPageTitle(recordMap);
 
-  const rawBlockData = pageId ? recordMap.block[pageId] : undefined;
+  const pageBlock = unwrapBlock(
+    pageId ? recordMap.block[pageId] : undefined
+  );
 
-  const pageBlock: Block | undefined =
-    rawBlockData && 'value' in rawBlockData
-      ? (rawBlockData.value as Block)
-      : (rawBlockData as Block | undefined);
+  function formatTimestamp(unixTimestamp: number | undefined): string | null {
+    if (!unixTimestamp) {
+      return null;
+    }
 
-  function formatTimestamp(unixTimestamp: number): string {
     const date = new Date(unixTimestamp);
+    if (Number.isNaN(date.getTime())) {
+      return null;
+    }
 
     const monthNames = [
       'January',
@@ -90,11 +104,14 @@ export function BlogPage({ recordMap, pageId }: BlogPageProps) {
     }
     const createdOn = formatTimestamp(pageBlock.created_time);
     const updatedOn = formatTimestamp(pageBlock.last_edited_time);
+    if (!createdOn) {
+      return null;
+    }
     return (
       <Center>
         <Text marginBottom={8}>
           {createdOn}
-          {createdOn !== updatedOn && `. Updated ${updatedOn}.`}
+          {updatedOn && createdOn !== updatedOn && `. Updated ${updatedOn}.`}
         </Text>
       </Center>
     );

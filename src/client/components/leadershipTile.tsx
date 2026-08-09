@@ -1,5 +1,6 @@
 import { EmailIcon } from '@chakra-ui/icons';
-import { Box, Button, Heading, Image, Text } from '@chakra-ui/react';
+import { Box, Button, Heading, Text } from '@chakra-ui/react';
+import Image from 'next/image';
 import { useState } from 'react';
 
 import { InstagramIcon } from './icons/instagramIcon';
@@ -65,13 +66,21 @@ export const LeadershipTile = (props: LeadershipTileProps) => {
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
     >
-      <Image
-        src={leader.img}
-        alt={leader.name}
+      <Box
+        position="relative"
         width="100%"
-        style={{ aspectRatio: 1, objectFit: 'cover' }}
+        style={{ aspectRatio: 1 }}
         borderRadius="20px 20px 0 0"
-      />
+        overflow="hidden"
+      >
+        <Image
+          src={leader.img}
+          alt={leader.name}
+          fill
+          sizes="256px"
+          style={{ objectFit: 'cover' }}
+        />
+      </Box>
       <Box
         backgroundColor="gray.800"
         borderRadius="0 0 20px 20px"

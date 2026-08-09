@@ -1,6 +1,8 @@
 import 'react-notion-x/src/styles.css';
 import 'prismjs/themes/prism-tomorrow.css';
 import 'katex/dist/katex.min.css';
+import 'react-pdf/dist/Page/AnnotationLayer.css';
+import 'react-pdf/dist/Page/TextLayer.css';
 
 import { Box, Center, Heading, Image, Text } from '@chakra-ui/react';
 import Layout from 'client/components/layout';
